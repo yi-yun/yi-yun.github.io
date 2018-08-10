@@ -184,11 +184,13 @@ social_icons:
 
 # Blog rolls
 links_icon: link
-links_title: Links
+links_title: 友链
 links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  Teaper: https://www.teaper.cn
+  H2O: https://marshmallowlands.github.io
+
 
 # Sidebar Avatar
 avatar:
