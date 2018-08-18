@@ -190,7 +190,7 @@ links_layout: block
 links:
   Teaper: https://www.teaper.cn
   H2O: https://marshmallowlands.github.io
-
+  如是艰难繁琐: https://www.cnblogs.com/kjsd/
 
 # Sidebar Avatar
 avatar:
@@ -260,7 +260,7 @@ sidebar:
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
+scroll_to_more: false
 
 # Automatically saving scroll position on each post/page in cookies.
 save_scroll: false
@@ -301,7 +301,7 @@ codeblock:
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result
     show_result: false
 
@@ -831,8 +831,7 @@ pace: true
 #pace-theme-minimal
 # For example
 # pace_theme: pace-theme-center-simple
-pace_theme: pace-theme-atom
-
+pace_theme: pace-theme-minimal
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest: true
