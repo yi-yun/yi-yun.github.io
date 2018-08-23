@@ -39,7 +39,7 @@
 {% endif %}
 
 
-<!--{% if theme.footer.powered.enable %}
+{% if theme.footer.powered.enable %}
   <div class="powered-by">{#
   #}{{ __('footer.powered', '<a class="theme-link" target="_blank"' + nofollow + ' href="https://hexo.io">Hexo</a>') }}{% if theme.footer.powered.version %} v{{ hexo_env('version') }}{% endif %}{#
 #}</div>
@@ -64,7 +64,7 @@
 #}</div>
 {% endif %}
 
-<div class="acris-blog-footer">
+<!--<div class="acris-blog-footer">
   <span>
     Powered by
     <a href="https://console.upyun.com/register/?invite=HyBuD3DXM" title="又拍云" target="_blank">
