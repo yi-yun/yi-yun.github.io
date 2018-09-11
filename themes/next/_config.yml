@@ -185,8 +185,8 @@ social_icons:
 # Blog rolls
 links_icon: link
 links_title: 友链
-links_layout: block
-#links_layout: inline
+#links_layout: block
+links_layout: inline
 links:
   Teaper: https://www.teaper.cn
   如是艰难繁琐: https://www.cnblogs.com/kjsd/
