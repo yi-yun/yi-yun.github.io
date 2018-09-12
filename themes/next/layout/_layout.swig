@@ -116,3 +116,4 @@
 
 </body>
 </html>
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
