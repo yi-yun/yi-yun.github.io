@@ -112,7 +112,9 @@ function createtime() {
        snum = Math.round(seconds);
         if(String(snum).length ==1 ){snum = "0" + snum;} 
         document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 ";
-         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"+"<br/>"; 
          } setInterval("createtime()",250); 
 </script>
+
+<script type="text/javascript" src="//ra.revolvermaps.com/0/0/0.js?i=0i40ktls27r&amp;d=3&amp;p=0&amp;b=0&amp;w=293&amp;g=2&amp;f=arial&amp;fs=12&amp;r=0&amp;c0=362b05&amp;c1=375363&amp;c2=000000&amp;ic0=0&amp;ic1=0" async="async"></script>
 
