@@ -969,3 +969,7 @@ fireworks: true
 
 passage_end_tag:
   enabled: true
+
+# Online contact
+daovoice: true
+daovoice_app_id: cbaf2df2
