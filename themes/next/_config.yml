@@ -579,10 +579,10 @@ needmoreshare2:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: NR3omc40mFuZotLdS2rw6cJ8Vrd2bILolhOl2t5_F30
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-125860337-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
@@ -974,3 +974,8 @@ passage_end_tag:
 # Online contact
 daovoice: true
 daovoice_app_id: cbaf2df2
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
