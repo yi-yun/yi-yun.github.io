@@ -184,12 +184,13 @@ social_icons:
 
 # Blog rolls
 links_icon: link
-links_title: 友链
+links_title: 友链(大佬赏脸)
 #links_layout: block
 links_layout: inline
 links:
   Teaper: https://www.teaper.cn
   如是艰难繁琐: https://www.cnblogs.com/kjsd/
+  冰冰的小屋: http://16bing.com
 
 # Sidebar Avatar
 avatar:
@@ -677,7 +678,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
