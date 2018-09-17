@@ -1,5 +1,5 @@
 ---
-title: Android Studio 安装（减少 C 盘空间）
+title: Android Studio 安装
 date: 2018-08-18 10:47:28
 tags: 
     - Android Studio 安装配置
@@ -15,7 +15,7 @@ categories: win 配置
 ## 前言
 
 之前重新安装了双系统，装完怎么能没有 Android Studio 这个神器呢？
-但博主是个强迫症的人，一般软件不喜欢安装在 C 盘，最主要的原因是 C 盘空间初始分的太小，加上 Windows 的尿性，天天更新之类少空间就很头疼
+但博主是个强迫症的人，一般软件不喜欢安装在 C 盘，最主要的原因是 C 盘空间初始分的太小，加上 Windows 的尿性，天天更新之类少空间就很头疼，所以应该尽可能减少占用 C 盘的空间。
 
 
 <!--more-->
