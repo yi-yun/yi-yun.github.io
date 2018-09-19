@@ -183,11 +183,11 @@ social_icons:
 #github_banner: https://github.com/yourname || Follow me on GitHub
 
 # Blog rolls
-links_icon: link
-links_title: 友链(大佬赏脸)
+#links_icon: link
+#links_title: 友链(大佬赏脸)
 #links_layout: block
-links_layout: inline
-links:
+#links_layout: inline
+#links:
   Teaper: https://www.teaper.cn
   如是艰难繁琐: https://www.cnblogs.com/kjsd/
   冰冰的小屋: http://16bing.com

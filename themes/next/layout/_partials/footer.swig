@@ -76,18 +76,7 @@
     </a>
   </span>
 </div>-->
-<!--<div class="friend-links">
-  <span>
-    <i class="fa  fa-fw fa-link"></i>友链：
-    <a href="https://www.teaper.cn"  target="_blank">
-      Teaper
-    </a>
-    &nbsp;
-    <a href="https://www.cnblogs.com/kjsd/"  target="_blank">
-      如是艰难繁琐
-    </a>
-  </span>
-</div>-->
+
 
 <span id="timeDate">载入天数...</span>
 <span id="times">载入时分秒...</span> 
@@ -116,5 +105,25 @@ function createtime() {
          } setInterval("createtime()",250); 
 </script>
 
-<script type="text/javascript" src="//ra.revolvermaps.com/0/0/0.js?i=0i40ktls27r&amp;d=3&amp;p=0&amp;b=0&amp;w=293&amp;g=2&amp;f=arial&amp;fs=12&amp;r=0&amp;c0=362b05&amp;c1=375363&amp;c2=000000&amp;ic0=0&amp;ic1=0" async="async"></script>
+<div class="friend-links">
+  <span>
+    <b><i class="fa  fa-fw fa-link"></i>友链(大佬赏脸)</b>：
+    <a href="https://www.teaper.cn"  target="_blank">
+      Teaper
+    </a>
+    &nbsp;
+    <a href="https://www.cnblogs.com/kjsd/"  target="_blank">
+      如是艰难繁琐
+    </a>
+    </a>
+    &nbsp;
+    <a href="http://16bing.com"  target="_blank">
+      冰冰的小屋
+    </a>
+  </span>
+</div>
+
+<!--
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/0.js?i=5rudbpmuu89&amp;d=3&amp;p=0&amp;b=0&amp;w=293&amp;g=1&amp;f=arial&amp;fs=12&amp;r=0&amp;c0=362b05&amp;c1=375363&amp;c2=000000&amp;ic0=0&amp;ic1=0" async="async"></script>
+-->
 
