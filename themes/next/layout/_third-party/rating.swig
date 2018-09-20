@@ -11,7 +11,7 @@
     var mc = document.createElement('script');
     mc.type = 'text/javascript';
     mc.async = true;
-    mc.src = '//embed.widgetpack.com/widget.js';
+    mc.src = 'https://embed.widgetpack.com/widget.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
   })();
   </script>

@@ -632,9 +632,9 @@ vkontakte_api:
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
-  enable: false
-  id:     #<app_id>
-  color:  fc6423
+  enable: true
+  id:     13924
+  color:  f79533
 # ---------------------------------------------------------------
 
 # Show number of visitors to each article.
