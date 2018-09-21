@@ -155,9 +155,10 @@ site_state: true
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/yi-yun || github 
-  E-Mail: mailto:yi--yun@outlook.com || envelope
-  #Google: https://plus.google.com/yourname || google
+  GitHub: https://github.com/yi-yun/ || fa fa-fw fa-github 
+  E-Mail: mailto:yi--yun@outlook.com || fa fa-fw fa-envelope
+  知乎: https://www.zhihu.com/people/cai-cai-67-63/activities || iconfont icon-zhihu
+  简书: https://www.jianshu.com/u/8f601ff84ace || iconfont icon-jian
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
