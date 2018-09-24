@@ -666,8 +666,12 @@ busuanzi_count:
   enable: true
   total_visitors: true
   total_visitors_icon: user
-  total_views: true
+  site_uv_header: 您是访问本站的第
+  site_uv_footer: 朋友
+  total_views: false
   total_views_icon: eye
+  site_pv_header: 访问次数：
+  site_pv_footer: 次
   post_views: true
   post_views_icon: eye
 
