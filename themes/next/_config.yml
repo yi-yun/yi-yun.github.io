@@ -549,7 +549,7 @@ gitment:
 #jiathis:
   ##uid: Get this uid from http://www.jiathis.com/
 
-add_this_id: ra-5b5f0b8719e0aa32
+#add_this_id: ra-5b5f0b8719e0aa32
 
 # NeedMoreShare2
 # Dependencies: https://github.com/theme-next/theme-next-needmoreshare2
@@ -563,21 +563,21 @@ add_this_id: ra-5b5f0b8719e0aa32
 #           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
 #           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
 needmoreshare2:
-  enable: false
+  enable: true
   postbottom:
-    enable: false
+    enable: true
     options:
       iconStyle: box
-      boxForm: horizontal
-      position: bottomCenter
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
-  float:
-    enable: false
-    options:
-      iconStyle: box
-      boxForm: horizontal
+      boxForm: vertical
       position: middleRight
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Evernote
+  float:
+    enable: true
+    options:
+      iconStyle: box
+      boxForm: vertical
+      position: topRight
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Evernote
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
