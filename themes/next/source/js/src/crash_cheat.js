@@ -4,7 +4,7 @@
  document.addEventListener('visibilitychange', function () {
      if (document.hidden) {
          $('[rel="icon"]').attr('href', "/images/TEP.png");
-         document.title = '╭(°A°`)╮ 改需求的来了 ~';
+         document.title = '╭(°A°`)╮ 提需求的来了 ~';
          clearTimeout(titleTime);
      }
      else {
