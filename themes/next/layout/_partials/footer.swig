@@ -104,8 +104,7 @@ function createtime() {
          document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"+"<br/>"; 
          } setInterval("createtime()",250); 
 </script>
-
-<div class="friend-links">
+<!--<div class="friend-links">
   <span>
     <b><i class="fa  fa-fw fa-link"></i>友链(大佬赏脸)</b>：
     <a href="https://www.teaper.cn"  target="_blank">
@@ -121,7 +120,7 @@ function createtime() {
       冰冰的小屋
     </a>
   </span>
-</div>
+</div>-->
 
 <!--
 <script type="text/javascript" src="//rf.revolvermaps.com/0/0/0.js?i=5rudbpmuu89&amp;d=3&amp;p=0&amp;b=0&amp;w=293&amp;g=1&amp;f=arial&amp;fs=12&amp;r=0&amp;c0=362b05&amp;c1=375363&amp;c2=000000&amp;ic0=0&amp;ic1=0" async="async"></script>

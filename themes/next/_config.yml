@@ -122,7 +122,7 @@ menu:
   tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
-  #friends: /friends/ || link
+  friends: /friends/ || link
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -192,9 +192,9 @@ social_icons:
 #links_layout: block
 #links_layout: inline
 #links:
-  Teaper: https://www.teaper.cn
-  如是艰难繁琐: https://www.cnblogs.com/kjsd/
-  冰冰的小屋: http://16bing.com
+  #Teaper: https://www.teaper.cn
+  #如是艰难繁琐: https://www.cnblogs.com/kjsd/
+  #冰冰的小屋: http://16bing.com
   
 
 # Sidebar Avatar
@@ -671,9 +671,9 @@ busuanzi_count:
   total_visitors_icon: user
   site_uv_header: 您是访问本站的第
   site_uv_footer: 位朋友
-  total_views: false
+  total_views: true
   total_views_icon: eye
-  site_pv_header: 访问次数：
+  site_pv_header: 本站总访问次数：
   site_pv_footer: 次
   post_views: true
   post_views_icon: eye
