@@ -10,7 +10,6 @@ date: 2018-10-01 18:47:54
 <hr>
 
 <div class="card-grid">
-    &nbsp;&nbsp;
     <div class="polaroid" >  
         <a href="https://www.teaper.cn/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20180930171537.png" alt="Norway" style="width:100%" /></a>
         <div class="containery"> 
@@ -49,8 +48,7 @@ date: 2018-10-01 18:47:54
     <div class="polaroid" >  
         <a href="https://chungzh.cn/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181007181554.png" alt="Norway" style="width:100%" /></a>
         <div class="containery"> 
-            <a href="https://chungzh.cn/" target="_blank" class="btn btn-outline btn-warning dim">Chung ZH's blog
-</a> 
+            <a href="https://chungzh.cn/" target="_blank" class="btn btn-outline btn-warning dim">Chung ZH's blog</a> 
             <br>
             <p>
                 <span><i class="fa fa-tags"></i>&nbsp;Python</span> 
@@ -59,16 +57,38 @@ date: 2018-10-01 18:47:54
             </p>
         </div>  
     </div>
-     &nbsp;&nbsp;
+    &nbsp;&nbsp;
     <div class="polaroid" >  
         <a href="https://5658.pw/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181007183900.png" alt="Norway" style="width:100%" /></a>
         <div class="containery"> 
-            <a href="https://5658.pw/" target="_blank" class="btn btn-outline btn-warning dim">欧阳博客
-
-</a> 
+            <a href="https://5658.pw/" target="_blank" class="btn btn-outline btn-warning dim">欧阳博客</a> 
             <br>
             <p>
                 <span><i class="fa fa-tags"></i>&nbsp;Hexo</span>          
+            </p>
+        </div>  
+    </div>
+    &nbsp;&nbsp;
+    <div class="polaroid" >  
+        <a href="https://liujunzhou.cn/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181007192449.png" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="https://liujunzhou.cn/" target="_blank" class="btn btn-outline btn-warning dim">Moshi</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;C++</span>          
+            </p>
+        </div>  
+    </div>
+    &nbsp;&nbsp;
+    <div class="polaroid" >  
+        <a href="https://www.edmath.cn/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181007194402.png" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="https://www.edmath.cn/" target="_blank" class="btn btn-outline btn-warning dim">keithx 的博客</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;Python</span>
+                &nbsp;
+                <span><i class="fa fa-tags"></i>&nbsp;前端</span>           
             </p>
         </div>  
     </div>
