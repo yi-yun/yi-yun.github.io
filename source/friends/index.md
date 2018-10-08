@@ -121,6 +121,21 @@ date: 2018-10-01 18:47:54
         </div>  
     </div>
 </span>
+&nbsp;
+<span>
+    <div class="polaroid" >  
+        <a href="https://staunchkai.com/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181008181936.png" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="https://staunchkai.com/" target="_blank" class="btn btn-outline btn-warning dim">Staunchkai</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;Java</span>
+                &nbsp;
+                <span><i class="fa fa-tags"></i>&nbsp;Hexo</span>           
+            </p>
+        </div>  
+    </div>
+</span>
 </div>
 
 <hr>
