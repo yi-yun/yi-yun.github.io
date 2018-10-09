@@ -136,6 +136,21 @@ date: 2018-10-01 18:47:54
         </div>  
     </div>
 </span>
+&nbsp;
+<span>
+    <div class="polaroid" >  
+        <a href="https://www.hojun.cn/" target="_blank"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="https://www.hojun.cn/" target="_blank" class="btn btn-outline btn-warning dim">hojun</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;技术</span>
+                &nbsp;
+                <span><i class="fa fa-tags"></i>&nbsp;生活</span>           
+            </p>
+        </div>  
+    </div>
+</span>
 </div>
 
 <hr>
