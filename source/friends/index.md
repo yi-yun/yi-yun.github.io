@@ -14,7 +14,7 @@ date: 2018-10-01 18:47:54
     <div class="polaroid" >  
         <a href="https://www.teaper.cn/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20180930171537.png" alt="Norway" style="width:100%" /></a>
         <div class="containery"> 
-            <a href="www.teaper.cn/" target="_blank" class="btn btn-outline btn-warning dim">Teaper</a> 
+            <a href="https://www.teaper.cn/" target="_blank" class="btn btn-outline btn-warning dim">Teaper</a> 
             <br>
             <p>
                 <span><i class="fa fa-tags"></i>&nbsp;个人网站</span>

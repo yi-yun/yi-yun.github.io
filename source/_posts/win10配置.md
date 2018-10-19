@@ -270,4 +270,4 @@ U 盘刻录工具，装 Linux 系统会用到
 #### [佛曰不可说](https://github.com/iMeiji/shadowsocks_install/wiki/shadowsocks-libev-%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85)
 
 
-## [下载地址](https://caomsacid0-my.sharepoint.com/:f:/g/personal/yi-yun_caoms_ac_id/EqIjMtarICtHmVzGmrezX4wBGx5L1OWlpfsmzmBa31YgqQ?e=7h0s2T)
+## [下载地址](https://caomsacid0-my.sharepoint.com/:f:/g/personal/yi-yun_caoms_ac_id/EqIjMtarICtHmVzGmrezX4wBGx5L1OWlpfsmzmBa31YgqQ?e=7h0s2T)（点此下载）
