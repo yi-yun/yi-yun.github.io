@@ -504,8 +504,8 @@ changyan:
 # more info please open https://valine.js.org
 valine:
   enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
-  appid:  wyqdxjyVw0BWLhMGSMr3lQpQ-gzGzoHsz
-  appkey:  jOCr0YIyGf3sBvg1WghMtIXi
+  appid: wyqdxjyVw0BWLhMGSMr3lQpQ-gzGzoHsz
+  appkey: jOCr0YIyGf3sBvg1WghMtIXi
   notify: true # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -667,7 +667,7 @@ firestore:
 # Show Views/Visitors of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: user
   site_uv_header: 您是访问本站的第
