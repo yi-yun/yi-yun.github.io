@@ -58,8 +58,6 @@ date: 2018-10-01 18:47:54
             <a href="https://chungzh.cn/" target="_blank" class="btn btn-outline btn-warning dim">Chung ZH's blog</a> 
             <br>
             <p>
-                <span><i class="fa fa-tags"></i>&nbsp;Python</span> 
-                 &nbsp;
                 <span><i class="fa fa-tags"></i>&nbsp;算法</span>           
             </p>
         </div>  
@@ -147,6 +145,21 @@ date: 2018-10-01 18:47:54
                 <span><i class="fa fa-tags"></i>&nbsp;技术</span>
                 &nbsp;
                 <span><i class="fa fa-tags"></i>&nbsp;生活</span>           
+            </p>
+        </div>  
+    </div>
+</span>
+&nbsp;
+<span>
+    <div class="polaroid" >  
+        <a href="http://mjxs.xyz/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181104154709.png" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="http://mjxs.xyz/" target="_blank" class="btn btn-outline btn-warning dim">猫九先森</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;Java</span>
+                &nbsp;
+                <span><i class="fa fa-tags"></i>&nbsp;开发</span>           
             </p>
         </div>  
     </div>
