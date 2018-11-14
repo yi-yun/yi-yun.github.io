@@ -164,6 +164,36 @@ date: 2018-10-01 18:47:54
         </div>  
     </div>
 </span>
+&nbsp;
+<span>
+    <div class="polaroid" >  
+        <a href="http://blog.aidejc.cn/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181112203410.jpg" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="http://blog.aidejc.cn/" target="_blank" class="btn btn-outline btn-warning dim">AIDE教程网</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;软件</span>
+                &nbsp;
+                <span><i class="fa fa-tags"></i>&nbsp;教程</span>           
+            </p>
+        </div>  
+    </div>
+</span>
+&nbsp;
+<span>
+    <div class="polaroid" >  
+        <a href="https://go2think.com/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20181114211528.png" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="https://go2think.com/" target="_blank" class="btn btn-outline btn-warning dim">Go 2 Think</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;微信公众号</span>
+                &nbsp;
+                <span><i class="fa fa-tags"></i>&nbsp;VPS</span>           
+            </p>
+        </div>  
+    </div>
+</span>
 </div>
 
 <hr>
