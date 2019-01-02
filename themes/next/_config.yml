@@ -676,7 +676,7 @@ busuanzi_count:
   total_views_icon: eye
   site_pv_header: 本站总共访问
   site_pv_footer: 次
-  post_views: true
+  post_views: false
   post_views_icon: eye
 
 

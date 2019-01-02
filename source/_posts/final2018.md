@@ -6,7 +6,7 @@ tags:
     - 个人
     - 收获
     - 未来
-categories:
+categories: 总结
 ---
 
 
