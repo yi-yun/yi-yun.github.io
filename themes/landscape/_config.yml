@@ -8,7 +8,7 @@ rss: /atom.xml
 excerpt_link: Read More
 fancybox: true
 
-# Sidebarceshi
+# Sidebar测试
 sidebar: right
 widgets:
 - category
