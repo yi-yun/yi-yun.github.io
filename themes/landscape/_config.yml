@@ -14,12 +14,12 @@ widgets:
 - category
 - tag
 - tagcloud
-- archive
+- archive1
 - recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
-# - category
+# - category中文
 # - tagcloud
 # - archive
 
