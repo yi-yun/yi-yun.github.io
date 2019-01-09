@@ -207,6 +207,21 @@ date: 2018-10-01 18:47:54
         </div>  
     </div>
 </span>
+&nbsp;
+<span>
+    <div class="polaroid" >  
+        <a href="http://blog.kuangcp.top/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190109225316.png" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="http://blog.kuangcp.top/" target="_blank" class="btn btn-outline btn-warning dim">Kuangcp</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;Java</span>         
+                <span><i class="fa fa-tags"></i>&nbsp;后端</span>         
+            </p>
+        </div>  
+    </div>
+</span>
+&nbsp;
 </div>
 
 <hr>
