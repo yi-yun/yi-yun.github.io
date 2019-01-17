@@ -17,7 +17,7 @@ categories: 日常记录
 
 早就听说了 FaceBook 出的 [React Native](https://reactnative.cn) 混合开发，一套代码两个平台的应用。前几天终于有幸尝试了几个应用，折腾死我了...
 
-<!--read-->
+<!--more-->
 
 ## 环境搭建
 - Android Studio  
