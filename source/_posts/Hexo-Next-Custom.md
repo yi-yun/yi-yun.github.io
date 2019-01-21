@@ -22,55 +22,63 @@ categories: 博客搭建
 
 ## 准备
 
-这篇博客并没有划定适宜人群，只是希望你可以通过此篇教程找到适合你的配置，或者通过我的博客找到一些灵感。这就是这篇教程的意义。
+这篇博客并没有划定适宜人群，只是希望你可以通过此篇教程找到适合你的配置，或者通过我的[博客](http://yi-yun.github.io)找到一些灵感。这就是这篇教程的意义。
 
-另外，需要说明的是，我的[博客](http://yi-yun.github.io)是 Next 6.3 版本，也没有采用数据文件夹的形式。~~为什么呢？因为一开始我不知道~~
+另外，需要说明的是，我的博客是 Next 6.3 版本，也没有采用数据文件夹的形式。~~为什么呢？因为一开始我不知道~~
 
 什么？你不知道 Hexo ？来来吃我一发[安利](https://easyhexo.github.io/Easy-Hexo/)
+
 ### 约定
 - 如果修改方法很多，我会以 • 方式区分，分步骤则为数字
 - 文件路径写在了代码块上部
+- 仔细看清站点配置文件和主题配置文件
+- 博客文件目录为 root 目录，即包括你的 themes/ 、source/ 文件夹等
+- 效果图在每个教程最开头
+~~如果没有就是上面几张显示了不想重复或者是单纯地忘记截了...~~
 
 ## 个性化配置
 
 ### 修改打赏文字抖动
 
-- 修改文件 `next\source\css\_common\components\post\post-reward.styl` ，将 `hover` 注释即可
+- 修改文件 `themes\next\source\css\_common\components\post\post-reward.styl` ，将 `hover` 注释即可
 - 可以在配置文件中添加重叠样式（推荐）
-    ```css Blog\themes\next\source\css\_custom\custom.styl
+    ```css themes\next\source\css\_custom\custom.styl
     //二维码不抖动
     #wechat:hover p, #alipay:hover p {
-    animation: none;
+        animation: none;
     }
     ```
 
 ### 修改打赏按钮
+
+![](https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/14bb7b45-86ff-4715-8a9e-dfd0765f4589.gif)
+
 1. 在文件中添加代码
-    ```css Blog\themes\next\source\css\_custom\custom.styl
+    ```css themes\next\source\css\_custom\custom.styl
     //打赏按钮修改
     #rewardButton span {
-    height: 35px;
-    width: 35px;
-    //line-height:30px; 
-    font-size: 15px;
-    font-family: "PingFang SC", "Microsoft YaHei", Georgia, sans-serif;
-    background: #34495e;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: 0.2s ease-out;
+        height: 35px;
+        width: 35px;
+        //line-height:30px; 
+        font-size: 15px;
+        font-family: "PingFang SC", "Microsoft YaHei", Georgia, sans-serif;
+        background: #34495e;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: 0.2s ease-out;
 
-    &:hover {
-    background: #649ab6;
-    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    -moz-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    }
+        &:hover {
+            background: #649ab6;
+            -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            -moz-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
     }
     ```
 2. 修改文件，将打赏字样改为
-    ```yml Blog\themes\next\languages\zh-CN.yml
+    ```yml themes\next\languages\zh-CN.yml
     reward:
     donate: <i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i>
     wechatpay: 微信支付
@@ -78,6 +86,9 @@ categories: 博客搭建
     ```
 
 ### 修改 busuanzi 统计功能
+
+![](https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190121151838.png)
+
 1. 主题配置文件中 busuanzi 项目增加
     ```yml 
     busuanzi_count:
@@ -110,7 +121,9 @@ categories: 博客搭建
 PS: [busuanzi](http://busuanzi.ibruce.info/) 因为在 2018.10.12 左右七牛云域名过期，导致无法显示人数，如果你的主题是旧版本，请在第二步的文件中更新为 `src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"`
 
 ### 给文章底部加星星
-~~虽然是异步，但访问速度太慢，经常加载不出来，已废弃~~
+
+虽然是异步，但访问速度太慢，经常加载不出来
+
 1. 在主题配置文件中搜索 `rating` 即可  
 2. 点击[此链接](https://widgetpack.com)注册账号，设置站点后，点击左侧设置， `site` 建议选私人，`rate` 选择颜色保存即可  
 3. 复制 ID 到配置文件，选择颜色  
@@ -136,6 +149,8 @@ PS: [busuanzi](http://busuanzi.ibruce.info/) 因为在 2018.10.12 左右七牛�
     ```
 
 ### 侧边栏近期文章
+
+![](https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190121152310.png)
 
 原理：去除友链，将友链换成近期文章
 
@@ -280,7 +295,7 @@ daovoice_app_id:   # 这里填你刚才获得的 app_id
 
 ### 网页标题崩溃欺骗
 1. 添加 JavaScript 代码
-在 `next\source\js\src` 文件夹下创建`crash_cheat.js`，添加代码：
+在 `themes\next\source\js\src` 文件夹下创建`crash_cheat.js`，添加代码：
     ```javascript
     var OriginTitle = document.title;
     var titleTime;
@@ -300,7 +315,7 @@ daovoice_app_id:   # 这里填你刚才获得的 app_id
     });
     ```
  1. 引用  
- 在`next\layout\_layout.swig`文件中，添加引用（注：在swig末尾添加）：
+ 在`themes\next\layout\_layout.swig`文件中，添加引用（注：在swig末尾添加）：
     ```html
     <script type="text/javascript" src="/js/src/crash_cheat.js"></script>
     ```
@@ -343,7 +358,7 @@ icon:
 找到 `background`属性更改为 `background: rgba(255,255,255,0.7)` 即为透明度30%的白色
 
 ### 更改 sidebar 大小
-找到`themes\next\source\js\src\util.js`
+找到 `themes\next\source\js\src\util.js`
 
 ``` 
 function updateSidebarHeight(height) {
@@ -405,8 +420,11 @@ function updateSidebarHeight(height) {
     ```
 
 ## SEO
+
+**看个人喜好修改，不一定要改的一模一样**
+
 ### 首页title优化
-更改 `index.swig` 文件 `your-hexo-site\themes\next\layout`   
+更改 `index.swig` 文件 `themes\next\layout`   
 
 ```css
 {% block title %} {{ config.title }} {% endblock %}
@@ -432,6 +450,7 @@ function updateSidebarHeight(height) {
 
 ## 推荐工具
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Chrome 浏览器](https://www.google.com/intl/zh-CN_ALL/chrome/)（不接受反驳）
 - [博客图床解决方案](https://yi-yun.github.io/%E5%9B%BE%E5%BA%8A%E7%9A%84%E9%80%89%E6%8B%A9/)
 
 
