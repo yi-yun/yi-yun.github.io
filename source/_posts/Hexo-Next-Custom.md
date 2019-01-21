@@ -360,7 +360,7 @@ icon:
 ### 更改 sidebar 大小
 找到 `themes\next\source\js\src\util.js`
 
-``` 
+```JavaScript
 function updateSidebarHeight(height) {
     height = height || 'auto';
     $('.site-overview, .post-toc').css('max-height', height);
