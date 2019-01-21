@@ -107,6 +107,7 @@ categories: 博客搭建
         {{ theme.busuanzi_count.site_pv_footer }}
     ```
 
+PS: [busuanzi](http://busuanzi.ibruce.info/) 因为在 2018.10.12 左右七牛云域名过期，导致无法显示人数，如果你的主题是旧版本，请在第二步的文件中更新为 `src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"`
 
 ### 给文章底部加星星
 ~~虽然是异步，但访问速度太慢，经常加载不出来，已废弃~~
@@ -429,8 +430,13 @@ function updateSidebarHeight(height) {
     <a href="{{ link }}" target="_blank" rel="external nofollow">{{ name }}</a>
     ```
 
+## 推荐工具
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [博客图床解决方案](https://yi-yun.github.io/%E5%9B%BE%E5%BA%8A%E7%9A%84%E9%80%89%E6%8B%A9/)
+
+
 ## 参考链接
 很久以前的事情了...有些参考链接找不到了，有侵权的请联系我补。
-- [打造个性超赞博客Hexo+NexT+GitHubPages的超深度优化](https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html)
+- [打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化](https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html)
 - [Hexo NexT 博客增加知乎豆瓣图标支持](https://blog.dongleizhang.com/posts/89dad1c1/#comments)
-- [EasyHexo](https://easyhexo.github.io/Easy-Hexo/)
+- [Easy Hexo](https://easyhexo.github.io/Easy-Hexo/)
