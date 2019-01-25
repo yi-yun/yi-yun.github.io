@@ -11,11 +11,13 @@ categories: 日常记录
 ---
 
 <p align="center">
-<img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190125001003.jpg" class="full-image" width=30%/>
+<img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190125001003.jpg" class="full-image" width=35%/>
 </p>
 
 ## 前言
-如图，用户友好都是狗屁，用户中心才是王道。
+> 用户友好都是狗屁，用户中心才是王道。
+
+Arch 将这句话解释得淋漓尽致。
 
 <!--more-->
 
@@ -86,9 +88,9 @@ timedatectl set-ntp true # 如果是双系统会涉及到时间不同步的问�
 1. 输入 `fdisk -l` 查看现有可操作磁盘
 2. 找到选中的磁盘，例如我选中了 sdb
 3. `cfdisk sdb` 图形化操作磁盘空间
-![](https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190125152203.jpg)
+![](https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190125181308.png)
 4. 我的分区是 `/boot`(Type:EFI)、`/`(Type:Linux )。记得操作完选择 write
-5. 退回 `tty`,`mkfs.ext4 /dev/sdb3`格式化你相对应的根分区
+5. `mkfs.ext4 /dev/sdb3` 格式化你相对应的根分区
 
 ### 挂载分区
 
@@ -153,7 +155,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 双系统需要安装 `os-prober` 以及 `ntfs-3g` 后 grub 生成引导入口时就会检测出 Win10
 
-![](https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190125161404.png)
+![](https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190125180817.png)
 
 PS:如果报 `warning failed to connect to lvmetad，falling back to device scanning` 错误。简单的方法是编辑 `/etc/lvm/lvm.conf` 这个文件，找到 `use_lvmetad = 1` 将1修改为0，保存，重新配置 grub。
 
