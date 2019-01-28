@@ -67,9 +67,9 @@
         <category>代码协作</category>
       </categories>
       <tags>
+        <tag>个人</tag>
         <tag>Git</tag>
         <tag>笔记</tag>
-        <tag>个人</tag>
       </tags>
   </entry>
   <entry>
@@ -80,8 +80,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>笔记</tag>
+        <tag>Java</tag>
         <tag>学习</tag>
       </tags>
   </entry>
@@ -107,8 +107,8 @@
         <category>Spring</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>笔记</tag>
+        <tag>Java</tag>
         <tag>Spring</tag>
         <tag>IoC</tag>
         <tag>AOP</tag>
