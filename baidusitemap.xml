@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yi-yun.github.io/Android-Studio-%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2019-01-29</lastmod>
-  </url>  <url>
-    <loc>https://yi-yun.github.io/CRLF-vs-LF/</loc>
-    <lastmod>2019-01-29</lastmod>
-  </url>  <url>
-    <loc>https://yi-yun.github.io/Git%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2019-01-29</lastmod>
-  </url>  <url>
     <loc>https://yi-yun.github.io/JavaReflect/</loc>
     <lastmod>2019-01-29</lastmod>
   </url>  <url>
@@ -41,6 +32,15 @@
     <lastmod>2019-01-29</lastmod>
   </url>  <url>
     <loc>https://yi-yun.github.io/win10%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2019-01-29</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/Android-Studio-%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2019-01-29</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/CRLF-vs-LF/</loc>
+    <lastmod>2019-01-29</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/Git%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2019-01-29</lastmod>
   </url>  <url>
     <loc>https://yi-yun.github.io/Hexo-Next-Custom/</loc>
