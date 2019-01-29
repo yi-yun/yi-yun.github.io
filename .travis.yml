@@ -34,6 +34,5 @@ deploy:
   email: $GIT_EMAIL
   keep-history: true
   target-branch: master
-  message: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
   on:
     branch: hexo
