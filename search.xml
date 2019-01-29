@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[DigitalOcean 的羊毛]]></title>
-    <url>%2FDigitalOcean%2F</url>
-    <content type="text"><![CDATA[前言 虚拟专用服务器（英语：Virtual private server，缩写为 VPS），是将一台服务器分割成多个虚拟专享服务器的服务。实现VPS的技术分为容器技术和虚拟机技术 。在容器或虚拟机中，每个VPS都可分配独立公网IP地址、独立操作系统、实现不同VPS间磁盘空间、内存、CPU资源、进程和系统配置的隔离，为用户和应用程序模拟出“独占”使用计算资源的体验。VPS可以像独立服务器一样，重装操作系统，安装程序，单独重启服务器。 用途 搭建博客 搭建 VPN 挂机 免流 etc… 介绍VPS 厂商比较有名的有搬瓦工，Vutlr，Linode 等，当然还有要介绍的主角 DigitalOcean 体验说下大致的体验吧，我用过 Vutlr、DigitalOcean 以及两家不支持换 IP 的小厂商 Vutlr日本机房延迟还行，就是容易被封 IP，虽然可更换 IP，但总归麻烦 DigitalOcean用的 ss，换了好几个地方的机房，没有被封过一次…也可能运气好 羊毛 DigitalOcean 需要 PayPal，绑定国内的借记卡或者信用卡就能用 麻烦吧，是的当初我也这么想，但换个角度，这样不也限制了很多国人来注册使用么，起码不会被 GFW 当做重点关注对象 点我的邀请链接注册充值 5 刀就可获得 100 美元的金额总共加起来是 105 美元，不过要 2 个月内花完，一辈子都没玩过 50 刀一月的服务器 GitHub 学生用户可获取 65 美元的金额GitHub 学生认证以及 DO 优惠码都需要与两家的客服邮件沟通 机房选择机房看所处地方以及手机运营商，如果你是移动用户，那么选新加坡机房，联通和电信用户新加坡绕路美国，因为当初是新手的缘故，我选的新加坡。当回到学校联通信号时，慢的质疑人生…后来才发现，原来是联通和电信绕路。 恕我直言，DO 的机房就一个洛杉矶，但是足够了。]]></content>
-      <categories>
-        <category>日常记录</category>
-      </categories>
-      <tags>
-        <tag>羊毛</tag>
-        <tag>VPS</tag>
-        <tag>推荐</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Arch Linux 安装手记]]></title>
     <url>%2Finstall-Arch%2F</url>
     <content type="text"><![CDATA[前言 用户友好都是狗屁，用户中心才是王道。 Arch 将这句话解释得淋漓尽致。 介绍 这是一段科普 Arch 的文字 Arch 拥有我见过的迄今为止最丰富的 Wiki（维基百科：？？）。与此同时，它的第三方仓库 aur 则是将开源的力量发挥到了极致。你见过一行命令就能在 Linux 上安装 QQ、TIM、微信、百度云和迅雷极速版么？另外，Arch 的社区也不输给其他发行版。相信我，你不会后悔装 Arch Linux 的。 我很庆幸第一台使用的主力 Linux 系统是 Arch Linux，因为它让我结识了很多朋友，也让我在 Linux 方面有更多的理解。 PS：如果你是新手，建议你先安装 Manjaro，这是 Arch 的衍生版，开箱即用，图形化界面安装，只需少量配置即可入我 Arch 神教。 准备 磁盘空间 一个 U盘 最好有根网线 看过 Wiki 安装教程（左侧可切换语言） 刻录 去 163 镜像源找日期最近的镜像下载（PS：最近日期的镜像可以减少包的更新） 用 Rufus 或者其他的刻录软件将 U盘 制作成启动盘 引导方式 UEFI/GPT BIOS/MBR 上面是是常见的两种引导方式，斜杠右边是引导方式所对应的硬盘格式，你需要搞清楚自己电脑的引导方式。如果你想装双系统更得注意。 磁盘空间将预计安装 Arch 的磁盘整个分区格式化，然后考虑磁盘分配。接下来是一位曾经划分磁盘空间不够的博主给你们的忠告 如果你预留的空间小于 100G，请不要划分什么 /home 分区，除非你只是实验。因为你把握不好大小，即使要划分，请把根目录划的大一点，起码六四开。 磁盘空间不够，请不要另外划分 /var 等分区，因为你不知道到底需要多大，到时候很麻烦 最好另外留 1G 空间给 /boot，我不喜欢划分交换空间，而喜欢采取交换文件的形式，因为交换文件可大可小（滑稽） 综上，1G /boot，剩下的留给根目录，老玩家请随意… 安装 电脑引导方式是 BIOS，就拿它来举例，UEFI 无非是要多挂载一个分区 U盘启动记得插上网线，每台电脑的 U盘 快速启动不一样，选对 U盘 则会看到下面这个界面 连接网络 当然是 ping -c 4 www.baidu.com，百度别的不好，但他是最好的测网络连通性的网站 有线连接dhcpd 无线连接输入 wifi-menu，如果名称有中文可能会乱码，我偶尔还会连不上，所以推荐有线 更新系统时间1timedatectl set-ntp true # 如果是双系统会涉及到时间不同步的问题 修改镜像文件 输入 vim /etc/pacman.d/mirrorlist 输入 /China 回车将光标移动到对应的网址，依次输入dd、gg、Shift P 输入 :wq 保存退出 磁盘分区 最重要的一块内容，难就难在这里 输入 fdisk -l 查看现有可操作磁盘 找到选中的磁盘，例如我选中了 sdb cfdisk sdb 图形化操作磁盘空间 我的分区是 /boot(Type:EFI)、/(Type:Linux )。记得操作完选择 write mkfs.ext4 /dev/sdb3 格式化你相对应的根分区 挂载分区挂载就是把额外添加的磁盘分区(这里我们指的就是刚刚格式完的硬盘分区)指定在特定的文件夹下，当我们打开这个文件夹的时候，文件夹的空间大小就是使用该分区的存储空间。 /mnt 文件夹是 Linux 专门挂载用的，挂载后，会在mnt里多出相应设备的目录。由于我们目前所有操作都还在 U盘 里，所以需要把磁盘分区挂载到 U盘 下的 /mnt 下，才能进入分区进行系统安装和配置。 下面是个例子123mount /dev/sdb3 /mnt # 挂载根分区mkdir /mnt/boot # 创建文件夹mount /dev/sdb2 /boot # 挂载 /boot 分区 挂载好可以输入 lsblk 查看下挂载结果 安装系统 需要有网 123pacstrap /mnt base base-devel # 安装系统genfstab -U /mnt &gt;&gt; /mnt/etc/fstab # 生成卷标arch-chroot /mnt # 进入/mnt下的系统 设置系统 需要对刚刚装好的系统 Arch Linux 进行必要的配置，后面操作的都是对硬盘上的 Arch Linux 操作 设置时间12ln -sf /usr/share/zoninfo/Asia/Shanghai /etc/localtime # 设为上海时间hwclock --systohc --utc # 设置硬件时间 修改编码 pacman -S vim #安装vim vim /etc/locale.gen 找到 en_US.UTF-8 和 zh_CN.UTF-8，把前面的#号删除，:wq 保存退出 locale-gen #重新生成locale echo LANG=en_US.UTF-8 &gt; /etc/locale.conf 主机名称 偷个懒 passwd # 设置 root 密码 必要软件12pacman -S networkmanager ntfs-3g os-prober grubsystemctl enable NetworkManager # 后面三个是引导需要的 安装引导12grub-install --target=i386-pc /dev/sdx （将sdx换成你安装的硬盘）grub-mkconfig -o /boot/grub/grub.cfg 双系统需要安装 os-prober 以及 ntfs-3g 后 grub 生成引导入口时就会检测出 Win10 PS:如果报 warning failed to connect to lvmetad，falling back to device scanning 错误。简单的方法是编辑 /etc/lvm/lvm.conf 这个文件，找到 use_lvmetad = 1 将1修改为0，保存，重新配置 grub。 完成123exit # 退出新系统回到启动盘系统umount -R /mnt # 取消/mnt挂载reboot # 重启 注意这个时候你可能会卡在有两行提示的地方无法正常关机，长按电源键强制关机即可 参考文章 Arch Wiki 以官方Wiki的方式安装ArchLinux 系统安装篇]]></content>
@@ -67,9 +54,9 @@
         <category>代码协作</category>
       </categories>
       <tags>
+        <tag>笔记</tag>
         <tag>个人</tag>
         <tag>Git</tag>
-        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -193,8 +180,8 @@
         <category>win 配置</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Android Studio 安装配置</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
