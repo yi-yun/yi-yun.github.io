@@ -4,6 +4,6 @@ db.json
 *.log
 node_modules/
 public/
-.deploy*/
+.depoly_*/
 .vscode/
 package-lock.json
