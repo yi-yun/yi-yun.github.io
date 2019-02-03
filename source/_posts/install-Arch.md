@@ -75,6 +75,7 @@ dhcpd
 ```bash
 timedatectl set-ntp true # 如果是双系统会涉及到时间不同步的问题
 ```
+时间不同步参考[文档](https://github.com/yi-yun/ArchLinux-Dotfiles/wiki/4.FAQ)
 
 ### 修改镜像文件
 1. 输入 `vim /etc/pacman.d/mirrorlist`
