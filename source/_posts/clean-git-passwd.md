@@ -20,7 +20,7 @@ categories: 代码协作
 
 ## 解决
 ### Git 命令行
-```shell
+```bash
 git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch sensitive-data.py' --prune-empty --tag-name-filter cat -- --all
 git push origin --force –all
 ```
@@ -50,7 +50,7 @@ git push origin --force –all
 
 当发现后，重新将密码去除后重新提交到 GitHub。此时，如果不看 commit 记录就不会知道历史版本，bfg 这个工具就为了防止有心人通过你的 commit 记录捕获你的敏感信息
 - 克隆仓库的 .git 文件夹
-    ```
+    ```bash
     git clone --mirror git@github.com:yi-yun/git777github-learn.git
     ```
 - 在本地创建 replace.txt
@@ -64,11 +64,11 @@ git push origin --force –all
     ```
 - 执行命令  
 需要注意两点，一是文本名字与路径，二是相关参数，也可用 `--replace-text`
-    ```shell
+    ```bash
     bfg -rt ~/replace.txt git777github-learn.git
     ```
 - 提交更改
-    ```shell
+    ```bash
     cd git777github-learn.git
     git reflog expire --expire=now --all && git gc --prune=now --aggressive
     git push
