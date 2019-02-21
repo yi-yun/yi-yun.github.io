@@ -146,10 +146,12 @@
 <meta property="og:site_name" content="斯是陋室，惟吾德馨">
 <meta property="og:description" content="前言算是 Git 的奇淫怪技">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-21T12:33:12.502Z">
+<meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190221203616.png">
+<meta property="og:updated_time" content="2019-02-21T12:40:43.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="清除 Git 敏感信息">
 <meta name="twitter:description" content="前言算是 Git 的奇淫怪技">
+<meta name="twitter:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190221203616.png">
 
 
 
@@ -430,7 +432,7 @@
                 
               
 
-              <time title="创建时间：2019-02-21 20:23:55 / 修改时间：20:33:12" itemprop="dateCreated datePublished" datetime="2019-02-21T20:23:55+08:00">2019-02-21</time>
+              <time title="创建时间：2019-02-21 20:23:55 / 修改时间：20:40:43" itemprop="dateCreated datePublished" datetime="2019-02-21T20:23:55+08:00">2019-02-21</time>
             
 
             
@@ -535,7 +537,8 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>算是 Git 的奇淫怪技</p>
+        <p></p><p align="center"><br>    <img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190221203616.png" class="full-class"><br></p><p></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>算是 Git 的奇淫怪技</p>
 <a id="more"></a>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>偶然在水群时看到一条消息，有人将服务器密码提交到了 Git 记录上。众所周知，公有仓库的 Git 记录是所有人可见的。所以一旦有敏感信息，不法分子就可以从你的 commit 记录中寻找突破口。</p>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><h3 id="Git-命令行"><a href="#Git-命令行" class="headerlink" title="Git 命令行"></a>Git 命令行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch --force --index-filter <span class="string">'git rm --cached --ignore-unmatch sensitive-data.py'</span> --prune-empty --tag-name-filter cat -- --all</span><br><span class="line">git push origin --force –all</span><br></pre></td></tr></table></figure>
