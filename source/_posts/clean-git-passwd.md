@@ -9,7 +9,9 @@ tags:
     - Arch
 categories: 代码协作
 ---
-
+<p align="center">
+    <img  src='https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190221203616.png' class="full-class">
+</p>
 ## 前言
 算是 Git 的奇淫怪技
 
