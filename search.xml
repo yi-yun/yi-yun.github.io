@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[清除 Git 敏感信息]]></title>
+    <url>%2Fclean-git-passwd%2F</url>
+    <content type="text"><![CDATA[前言算是 Git 的奇淫怪技 背景偶然在水群时看到一条消息，有人将服务器密码提交到了 Git 记录上。众所周知，公有仓库的 Git 记录是所有人可见的。所以一旦有敏感信息，不法分子就可以从你的 commit 记录中寻找突破口。 解决Git 命令行12git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch sensitive-data.py' --prune-empty --tag-name-filter cat -- --allgit push origin --force –all 这是我谷歌的命令，大概是在 Git 记录中删除带有敏感信息的文件，然后强制 push BFG那么有没有更优雅的方法呢，答案是肯定的。 如标题所言，BFG Repo Cleaner 能帮到我们。该工具是用 Scala 写的，专门为清除 Git 提交记录中带有敏感信息而产生的。 使用 需要 Java 7 以上版本 安装以及使用 点此下载 jar 包java -jar bfg.jar 命令参数 yay -S bfgbfg 命令参数 如上所示，有两种安装方式，第一种是通用的运行下载的 jar 包，另一种是为 Arch 用户准备的…（这时候就要喊出“Arch 牛逼”）因为我是 Arch 忠实粉丝，所以就以 Arch 中的命令作为示范… 测试在 GitHub 仓库中创建一个专门来测试的仓库（我学 Git 的时候就已经有一个专门用来测试 Git 的仓库），将密码假装不小心上传到 GitHub。 当发现后，重新将密码去除后重新提交到 GitHub。此时，如果不看 commit 记录就不会知道历史版本，bfg 这个工具就为了防止有心人通过你的 commit 记录捕获你的敏感信息 克隆仓库的 .git 文件夹 1git clone --mirror git@github.com:yi-yun/git777github-learn.git 在本地创建 replace.txt文本名字是任意的，文本内容需要将密码填上，默认替换成 ***REMOVED***，也可以将其替换成自己想要的字符，规则如下所示 12345PASSWORD1 # Replace with &apos;***REMOVED***&apos; (default)PASSWORD2==&gt;examplePass # replace with &apos;examplePass&apos; insteadPASSWORD3==&gt; # replace with the empty stringregex:password=\w+==&gt;password= # Replace, using a regexregex:\r(\n)==&gt;$1 # Replace Windows newlines with Unix newlines 执行命令需要注意两点，一是文本名字与路径，二是相关参数，也可用 --replace-text 1bfg -rt ~/replace.txt git777github-learn.git 提交更改 123cd git777github-learn.gitgit reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressivegit push 拓展这货还能删除大文件，有需要的童鞋可以参考官网 参考 官网 清除历史提交记录中的敏感信息 不小心把密码上传到 GitHub 了，怎么办]]></content>
+      <categories>
+        <category>代码协作</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+        <tag>工具</tag>
+        <tag>Arch</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[早就是优势]]></title>
     <url>%2Fearly-is-advantage%2F</url>
     <content type="text"><![CDATA[前言 此篇纯属扯淡 如题。 起因在看本文前，我希望你之前看过这篇文章并申请了账号，因为白天收到站内信 可能被白嫖太多导致这个策略吧2333，时间到期你就需要掏钱了，也就意味着腾讯云对象存储无法再为用户提供免费的服务。你付费当然可以当我没说…其实也没多少钱 主要是个人不喜欢每个月或者每年提供多少钱而且图床一旦选定，更换是件很麻烦的事情 总结 站在风口上，猪都会飞 此类性质的事件买 VPS 套餐遇到的最多，其中就包括前段时间搬瓦工下架他的传家宝，让我后悔的啊。虽然速度可能不咋地，但是类似大厂家 19.99 刀一年的服务器已经很少了。虽然是小事吧，但是又让我深刻地体会到了“早就是优势”。 就如同时代的风口，没有人能精准预测未来的风口在哪。只能说，我觉得可能某个行业不错，学习以及积攒相关知识，厚积薄发，等待真正机会来临。 另外，推荐一部短片 change(); window.onload = function() { window.onresize = change; }; function change() { var c = document.getElementById("c"); var p = c.parentNode; // div容器的父节点，p是parent的首字母 // 下面是适配容器的宽高 c.style.width = p.offsetWidth + "px"; if (navigator.userAgent.indexOf('iPad') === -1 && p.offsetWidth >= 480) { // 针对非iPad和div容器父节点宽度值大于OR等于480的情况，480是一个边界值 // 采用了16:9的比例进行缩放，118px是推荐面板+进度条+哔哩哔哩入口跳转栏等元素高度数值的总和 c.style.height = c.offsetWidth / 16 * 9 + 118 + 'px'; } else { // 针对iPad或div容器父节点宽度值小于480的情况（手机） c.style.height = c.offsetWidth / 16 * 9 + 'px'; } }; 嵌入视频链接参考]]></content>
@@ -35,8 +50,8 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>收获</tag>
         <tag>Arch</tag>
+        <tag>收获</tag>
         <tag>Linux</tag>
         <tag>安装</tag>
       </tags>
@@ -65,9 +80,9 @@
       </categories>
       <tags>
         <tag>配置笔记</tag>
+        <tag>GitHub</tag>
         <tag>Hexo</tag>
         <tag>Next</tag>
-        <tag>GitHub</tag>
         <tag>Blog</tag>
         <tag>Custom</tag>
       </tags>
