@@ -8,7 +8,7 @@ tags:
 categories: 树莓派
 ---
 <p align="center">
-    <img  src='https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190221203616.png' class="full-class">
+    <img  src='https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190227154346.png' class="full-class">
 </p>
 <!--[TOC]-->
 
@@ -60,6 +60,7 @@ categories: 树莓派
 
 ## raspi-config
 > 默认管理员用户为 pi，密码为 raspberry
+
 - 设置时间
 - 将 tf 卡填充满  
 默认系统只占很少的空间
