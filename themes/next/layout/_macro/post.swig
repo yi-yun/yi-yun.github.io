@@ -111,11 +111,9 @@
                 {% if theme.post_meta.item_text %}
                   <span class="post-meta-item-text">{{ __('post.edited') }}</span>
                 {% endif %}
-                <!--
                 <time title="{{ __('post.modified') + __('symbol.colon') + full_date(post.updated) }}" itemprop="dateModified" datetime="{{ moment(post.updated).format() }}">{#
                 #}{{ date(post.updated) -}}
                 </time>
-                !-->
               {% endif %}
             {% endif %}
           </span>
