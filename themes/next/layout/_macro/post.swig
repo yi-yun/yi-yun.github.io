@@ -87,7 +87,7 @@
               {% endif %}
 
               {% if !date_diff && time_diff && theme.post_meta.updated_at.enabled && theme.post_meta.updated_at.another_day %}
-                {% set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) %}
+                {% set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) + ' / ' + __('post.modified') + __('symbol.colon') + time(post.updated) %}
               {% else %}
                 {% set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) %}
               {% endif %}
@@ -111,9 +111,11 @@
                 {% if theme.post_meta.item_text %}
                   <span class="post-meta-item-text">{{ __('post.edited') }}</span>
                 {% endif %}
+                <!--
                 <time title="{{ __('post.modified') + __('symbol.colon') + full_date(post.updated) }}" itemprop="dateModified" datetime="{{ moment(post.updated).format() }}">{#
                 #}{{ date(post.updated) -}}
                 </time>
+                !-->
               {% endif %}
             {% endif %}
           </span>
