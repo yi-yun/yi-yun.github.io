@@ -86,8 +86,8 @@
                 <span class="post-meta-item-text">{{ __('post.posted') }}</span>
               {% endif %}
 
-              {% if !theme.post_meta.updated_at.enabled && theme.post_meta.updated_at.another_day %}
-                {% set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) + ' / ' + __('post.modified') + __('symbol.colon') + time(post.updated) %}
+              {% if !date_diff && time_diff && theme.post_meta.updated_at.enabled && theme.post_meta.updated_at.another_day %}
+                {% set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) %}
               {% else %}
                 {% set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) %}
               {% endif %}
