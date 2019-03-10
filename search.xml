@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[魔鬼藏在细节中]]></title>
+    <url>%2Fdetails%2F</url>
+    <content type="text"><![CDATA[碎碎念 The devil is in the details. 被拒了简历，心情低落… 答辩本来也没啥，就是整个团队去拿着项目参加比赛，我只是该项目总负责人以及后端开发。但是很不幸的是，团队里考研的考研，划水的划水，也就只剩我去演讲…… 那么问题就来了，一写代码的让我分享技术啥的我倒还可以凑活，这尼玛直接介绍项目让我很难受啊…… 以上纯属牢骚，有点偏题了，但是在金三银四的黄金校招周中，每分每秒都十分宝贵。然而我还是不敢跟老师明说，不过我已经说明，忙完希望杯就不干活了，就当这几天为以后收利息了吧，虽然付出的代价也挺大的。 细节 我在这立个 flag，能进省赛答辩时的细节 微笑面对评委老师不过他们没怎么看我2333 在答辩结束后竟然还能询问真的是细节，我没有想到。这次比赛主要是给专家看有哪几个项目可以参加省赛的，有指导意义，也是老师不找演讲人的理由。所以，辅导员在结束后带着我们又找了一下三位和蔼可亲的评委老师。虽然已经评完分了，但我认为真的很有必要。 结语 古代剑客们在与对手狭路相逢时，无论对手有多么强大，就算对方是天下第一剑客，明知不敌，也要亮出自己的宝剑，即使倒在对手的剑下，也虽败尤荣。 杀入春招。]]></content>
+      <categories>
+        <category>日常记录</category>
+      </categories>
+      <tags>
+        <tag>个人</tag>
+        <tag>学习</tag>
+        <tag>项目</tag>
+        <tag>春招</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一个热点玩转树莓派]]></title>
     <url>%2Fraspberry-setting%2F</url>
     <content type="text"><![CDATA[前言前几天千魂剑问我关于树莓派的问题，好久不用了，感觉有点遗忘，就有了此篇文章。 安装系统 官方下载地址对是压缩包，所以 Windows 下的 Win32 Disk Imager 可以直接刻录 zip 到 TF 卡 工具推荐 读卡器虽然 SD 卡也可以，但现在很多电脑没有 SD 卡槽 镜像烧录 Win Rufus Mac买不起，没用过 Linux dd 命令 ssh 两种方法，网线，热点，但两者需要在一个局域网内 。拥有屏幕的用户请路过… 网线连一根网线到路由器，在路由器后台查看 IP 撒花完结。 热点 其实，树莓派基金会为了达成这个需求， 2017-2018 年逐渐在改善系统来适应这种优雅的方式，所以此方法只适用于新版系统。 打开烧录好的内存卡文件夹 找到 /boot 分区 建立一个空的 ssh 文件以及 wpa_supplicant.conf 1234567country=GBctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdevupdate_config=1network=&#123; ssid=&quot;你的Wifi名称，注意大小写&quot; psk=&quot;你的Wifi密码&quot;&#125; 说明：空的 ssh 文件是为了开启 ssh 服务，系统默认不开启；wpa_supplicant.conf 是为了自动连接热点，ssid 支持中文。开机会将会删除以上两个文件。 raspi-config 默认管理员用户为 pi，密码为 raspberry 设置时间 将 tf 卡填充满默认系统只占很少的空间 镜像源更改 树莓派源分为两种，一种为树莓派基金会提供，另一种由独立开发者提供 查询版本号lsb_release -a 不一样的版本更改源的地址不一样，版本号有 Stretch、Jessie 等，一般最新的是 Stretch 官方源修改这个软件源相关资料比较少，修改树莓派基金会单独提供的源 /etc/apt/sources.list.d/raspi.list1deb https://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ stretch main ui 开发源修改 /etc/apt/sources.list12deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpideb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main contrib non-free rpi 最后别忘了 sudo apt-get update 更新系统 个人体验 我是拿树莓派当本地服务器的 喜欢纯命令行，不喜欢 VNC，而且感觉有点卡顿 风扇有点响，据说要买那种悬浮的，然而我是一套 散热片、亚克力壳，就是好看 不下片的话，8G TF 卡够了 参考链接 树莓派—raspbian软件源（全） 树莓派如何完全无头(无屏无网线无键盘鼠标)安装]]></content>
