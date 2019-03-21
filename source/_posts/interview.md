@@ -8,11 +8,16 @@ tags:
 categories: 面试
 ---
 
+<p align="center">
+<img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190321105440.png" class="full-image"/>
+</p>
+
 ## 前言
 > 复习的时候就想写了，为自己做点笔记，加深印象理解原理吧。
 
+<!--more-->
 ## 题目
-> 又一个我的偶像 [CaoZ 老师](
+> 又一个我敬佩的人 [CaoZ 老师](
 https://www.zhihu.com/question/19596615/answer/12327310)分享在知识星球的片段
 
 1. 从你浏览器输入网址，到网页打开。中间都经历了什么。
