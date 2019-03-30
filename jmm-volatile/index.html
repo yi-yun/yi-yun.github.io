@@ -138,16 +138,21 @@
 
 
 
-  <meta name="description" content="诚毅勤朴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="斯是陋室，惟吾德馨">
-<meta property="og:url" content="https://yi-yun.github.io/categories/随笔/index.html">
+  <meta name="description" content="感悟最近看《深入理解 Java 虚拟机》的一些笔记，又是一本相见恨晚的书，强烈推荐前几章和后面几章。">
+<meta name="keywords" content="笔记,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 内存模型与 volatile">
+<meta property="og:url" content="https://yi-yun.github.io/jmm-volatile/index.html">
 <meta property="og:site_name" content="斯是陋室，惟吾德馨">
-<meta property="og:description" content="诚毅勤朴">
+<meta property="og:description" content="感悟最近看《深入理解 Java 虚拟机》的一些笔记，又是一本相见恨晚的书，强烈推荐前几章和后面几章。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/coffee-1580595_960_720.jpg">
+<meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/test.png">
+<meta property="og:updated_time" content="2019-03-30T10:34:45.416Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="斯是陋室，惟吾德馨">
-<meta name="twitter:description" content="诚毅勤朴">
+<meta name="twitter:title" content="Java 内存模型与 volatile">
+<meta name="twitter:description" content="感悟最近看《深入理解 Java 虚拟机》的一些笔记，又是一本相见恨晚的书，强烈推荐前几章和后面几章。">
+<meta name="twitter:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/coffee-1580595_960_720.jpg">
 
 
 
@@ -156,7 +161,7 @@
 
 
 
-  <link rel="canonical" href="https://yi-yun.github.io/categories/随笔/">
+  <link rel="canonical" href="https://yi-yun.github.io/jmm-volatile/">
 
 
 
@@ -166,7 +171,7 @@
   };
 </script>
 
-  <title>分类: 随笔 | 斯是陋室，惟吾德馨</title>
+  <title>Java 内存模型与 volatile | 斯是陋室，惟吾德馨</title>
   
 
 
@@ -222,7 +227,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/yi-yun" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -288,7 +293,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
   </li>
@@ -366,86 +371,350 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>随笔<small>分类</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yi-yun.github.io/jmm-volatile/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yi-Yun">
+      <meta itemprop="description" content="诚毅勤朴">
+      <meta itemprop="image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/IMG_5839.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="斯是陋室，惟吾德馨">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/博客小记/" itemprop="url">
-              
-                <span itemprop="name">陌上花开</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Java 内存模型与 volatile
+              
+            
+          </h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-07-24T10:34:54+08:00" content="2018-07-24">
-          07-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-30 18:25:00" itemprop="dateCreated datePublished" datetime="2019-03-30T18:25:00+08:00">2019-03-30</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/jmm-volatile/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/jmm-volatile/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/jmm-volatile/" class="leancloud_visitors" data-flag-title="Java 内存模型与 volatile">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p align="center"><br><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/coffee-1580595_960_720.jpg" class="full-image" width="60%"><br></p>
+
+<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>最近看《深入理解 Java 虚拟机》的一些笔记，又是一本相见恨晚的书，强烈推荐前几章和后面几章。</p>
+<a id="more"></a>
+<h2 id="内存模型"><a href="#内存模型" class="headerlink" title="内存模型"></a>内存模型</h2><p><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/test.png" alt="image"></p>
+<p>此图来自《深入理解 Java 虚拟机》，看完以后感觉这个知识水平都提高了2333。这里的主内存不是内存条，而是虚拟机的内存的一部分。不同的线程通过刷新主内存中的值来进行同步。如果没有线程并发的考虑，闭着眼睛就能想到数据的不一致。</p>
+<p>内存模型定义了以下 8 种操作来完成主内存与工作内存同步的细节，除去特殊情况，每一个操作是原子不可再分的</p>
+<ul>
+<li>lock</li>
+<li>unlock</li>
+<li>read</li>
+<li>load</li>
+<li>use</li>
+<li>assign</li>
+<li>store</li>
+</ul>
+<p>另外还定义了一些规则，太多了没咋记住……不过也以此引出了最为常见的先行发生的原则，用于确定访问是否线程安全。</p>
+<h2 id="happen-before-规则"><a href="#happen-before-规则" class="headerlink" title="happen-before 规则"></a>happen-before 规则</h2><p>中文名叫先行发生规则，含义是Java 内存模型下天然存在一些关系，无需同步器去实现，可以在编码中直接使用。换句话说，不在先行发生规则的两个操作，虚拟机可以对它们进行重排序，也就是线程不安全了。</p>
+<p>规则有八条：</p>
+<ul>
+<li>程序次序规则<br>同一线程按照控制流顺序</li>
+<li>管程锁定规则<br>unlock 指令操作先于 lock 操作</li>
+<li>volatile 变量规则、<br>写操作先于读操作</li>
+<li>线程启动规则<br>start 最先发生</li>
+<li>线程终止规则<br>终止检测最后发生</li>
+<li>线程中断规则<br>interrupt() 先行发生于代码检测中断</li>
+<li>对象终结规则<br>初始化先于 finalize</li>
+<li>传递性<br>A 先于 B，B 先于 C</li>
+</ul>
+<p>需要注意的一点是，时间先后顺序与先行发生顺序没有太大的关系，一切以先行发生的原则为准。</p>
+<h2 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h2><blockquote>
+<p>有了内存模型的概念，对 volatile 又有了几分理解<br>Java 虚拟机提供的最轻量的同步机制，当一个变量被定义为 volatile 时有一下两种语义</p>
+</blockquote>
+<h3 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h3><p>volatile 变量对所有线程是立即可见的，对 volatitle 变量所有写操作都能立即反映到其他线程中。但注意他并不是安全的，因为该操作不是原子性的。所谓原子性，就是该变量执行如运算等操作只有等它运算完写入主内存中，其他线程才能操作该变量。没错，保证原子性你可以理解为加个锁。</p>
+<h3 id="禁止指令重排序"><a href="#禁止指令重排序" class="headerlink" title="禁止指令重排序"></a>禁止指令重排序</h3><blockquote>
+<p>指令重排序指操为了采用流水线机制加快指令的处理速度<br>重排序分为两类：编译期重排序和运行期重排序，分别对应编译时和运行时环境。重排序的前提是需要满足以下条件</p>
+<ol>
+<li>在单线程环境下不能改变程序运行的结果； </li>
+<li>存在数据依赖关系的不允许重排序</li>
+</ol>
+</blockquote>
+<p>普通变量仅仅保证在方法执行过程中所有依赖赋值结果的地方能获取正确结果，而不能保证赋值操作和代码执行顺序一样</p>
+<h3 id="如何实现"><a href="#如何实现" class="headerlink" title="如何实现"></a>如何实现</h3><ul>
+<li>在该变量的写操作之前编译器插入一个写屏障</li>
+<li>在该变量的读操作之前编译器插入一个读屏障</li>
+</ul>
+<p>翻译到汇编代码层面 <code>lock addl $0x0,(%esp)</code> 就是将 ESP 寄存器的值加 0，使本 CPU 的 Cache 写入内存，该写入操作会引起别的 CPU 或者别的内核无效化其 Cache。通过该空操作让前面对 volatile 变量的修改对其他 CPU 立即可见。</p>
+<p>重排序为了优化，至于禁止重排序，也是将该变量的值强制刷出缓存，将修改同步到主内存，意味着所有之前的操作已经完成，也就达到了无法跨越内存屏障的效果了。这里要仔细体会。</p>
+<h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><ul>
+<li>volatile 不保证原子性</li>
+<li>屏蔽指令重排序操作 JDK 1.5 中才被修复，此前不可完全避免重排序</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>强烈推荐《深入理解 Java 虚拟机》，看目录你会发现那些曾几何时听说过晦涩难懂的名字都会在此书中讲到。</p>
 
       
     </div>
 
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------- The End -------------</div>
+    
+</div>
+      
+    </div>
+    
+    
+    
+    
+   
+    
+
+    
+      <div>
+        <div style="margin: 20px auto; width: 90%; text-align: center;">
+  <div>「不为五斗米折腰------真香」</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span><i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i></span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Yi-Yun 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"><i class="fa fa-compass"></i> 笔记</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-compass"></i> Java</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;看完记得五星好评哦&lt;)</div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/interview/" rel="next" title="几道面试题">
+                <i class="fa fa-chevron-left"></i> 几道面试题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -466,8 +735,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -725,6 +1003,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#感悟"><span class="nav-number">1.</span> <span class="nav-text">感悟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存模型"><span class="nav-number">2.</span> <span class="nav-text">内存模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#happen-before-规则"><span class="nav-number">3.</span> <span class="nav-text">happen-before 规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#volatile"><span class="nav-number">4.</span> <span class="nav-text">volatile</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可见性"><span class="nav-number">4.1.</span> <span class="nav-text">可见性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#禁止指令重排序"><span class="nav-number">4.2.</span> <span class="nav-text">禁止指令重排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何实现"><span class="nav-number">4.3.</span> <span class="nav-text">如何实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意点"><span class="nav-number">4.4.</span> <span class="nav-text">注意点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -969,6 +1263,10 @@ function createtime() {
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
@@ -1392,6 +1690,23 @@ function createtime() {
   </script>
 
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 13924,
+    el: 'wpac-rating',
+    color: 'f79533'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
 
