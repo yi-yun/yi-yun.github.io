@@ -229,7 +229,7 @@ date: 2018-10-01 18:47:54
             <br>
             <p>
                 <span><i class="fa fa-tags"></i>&nbsp;Windows</span>
-                <span><i class="fa fa-tags"></i>&nbsp;Arch Linux</span>         
+                <span><i class="fa fa-tags"></i>&nbsp;弟弟</span>         
             </p>
         </div>  
     </div>
