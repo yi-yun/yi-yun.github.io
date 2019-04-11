@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java 并发入门]]></title>
+    <url>%2Fthread%2F</url>
+    <content type="text"><![CDATA[碎碎念 拖更一时爽，一直拖更一直爽 最近忙于找实习以及挑战杯省赛，两者聚在一起当然就忙得不可开交。关于省赛，前几篇文章也有提到，其实我是不太愿意花时间搞的，但是命运使然，只好寻找某一平衡点喽。 概念 介绍一些概念，当然也为了使自己印象深刻 线程操作系统调度的最小单元，一个进程中的所有的线程都有完全一样的地址空间，意味着共享同样的全局变量。 上下文切换CPU 分配给各个线程时间片，但因为时间片很短，所以 CPU 不停的切换线程。但是 CPU 切换前会保存上一个任务的状态（进程状态、优先级、程序 I/O 的状态、文件描述符等）到内存，以便下次切换回这个状态。 解决方案 多次上下文切换会影响多线程执行速度 无锁并发编程 CAS 算法 使用最少线程 协程 线程间通信 等待/通知的经典范式 等待方 123456synchronized(对象)&#123; while(条件不满足)&#123; 对象.wait(); &#125; 对应的处理逻辑&#125; 通知方 1234synchronized(对象)&#123; 改变对象 对象.notifyAll();&#125; Thread.join() 线程 A 执行了 thread.join() 语句时表示，当前线程 A 等待 thread 线程终止之后才从 thread.join() 返回。 ThreadLocal 个人看源码理解就是在虚拟机栈中存着引用，真正存值的是 ThreadLocalMap。而 ThreadLocalMap 内部用 Entry 存放 K-V，哈希冲突则采用的是开放寻址法。另外，ThreadLocal 在线程池里容易存在内存泄漏，因为只要线程被 GC 回收，即使弱引用 Key 的值为 null，一般不会内存泄漏。就怕线程池回收利用，Key 为 null 了，value 则还有值。解决方法就是调用 remove() 方法，将值设置为 null。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>春招</tag>
+        <tag>面试</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[深入理解 Java 虚拟机]]></title>
     <url>%2Fjvm%2F</url>
     <content type="text"><![CDATA[前言有输入肯定要有输出。 内存区域划分 程序计数器唯一一个没有规定 OOME 的地方。执行 Java 方法时记录当前方法的 JVM 指令地址；执行 Native 方法时，计数器为空。 Java 虚拟机栈 本地方法栈 堆内存管理的核心区域，分为新生代和老年代，再细致一点分为 Eden 空间、From Survivor、To Survivor 等 方法区所有线程共享的内存区域，存储元数据，如类结构信息、字段、方法等。无法满足内存分配需求时，抛出 OOME。 运行时常量池方法区的一部分，存放编译期生成的各种字变量，还有运行时的符号引用等。例如 String.intern() 后放置的地方。 直接内存JDK 1.4 引入 NIO 类，它可以使用 Native 函数库直接分配堆外内存，然后通过一个存储在 Java 堆中的 DirectByteBuffer 对象作为这块内存的引用进行操作。 Code CacheJIT Compiler 在运行时对热点方法的编译；GC 运行时部分需要占用的空间等，但 JVM 规范中并没有涉及。 OutOfMemoryError堆溢出不断创建对象并且无法回收 栈溢出在单线程下，当内存无法分配时，虚拟机抛出通常是 StackOverflowError 异常。 方法区运行时常量池溢出JVM 对于方法区的回收非常不积极，例如老版本的 JDK 处理 String.Intern() 时占用太多空间。随着元数据区的移除永久代，类元数据只受本地内存影响。 本机直接内存溢出垃圾回收不会主动收集 Direct Buffer，需要自己手动调 System.gc()。另外。不会在 Heap Dump 中看见。 垃圾回收判断对象是否存活，引用计数法很难解决循环引用的问题，所以才有了可达性分析 GC Roots 的对象包括以下几种： 虚拟机栈中引用的对象 方法去类静态属性引用的对象 方法去常量引用的对象 Native 方法引用的对象 可达性分析算法至少两次标记过程，第一次标记筛选出有必要执行的 finalize() 方法的对象，对象可在 finalize() 中自救一次，因为 finalize() 方法只会被系统自动调用一次。 回收算法 标记-清除算法效率不高，会产生大量不连续的内存碎片 复制算法新生代采用复制算法收集内存，大对象通过分配担保机制进入老年代 标记-整理算法将存活的对象移至一端，减少内存碎片 分代收集算法根据年代特点采用最适当的算法，需要上述算法支持 内存分配 都可通过参数设定 对象优先在 Eden 中分配 大对象直接进入老年代 长期存活的对象将进入老年代年龄计数器 动态对象年龄判断Survivor 空间中相同年龄所有对象大小总合大于 Survivor 空间的一半，年龄大于或等于该年龄的对象就直接进入老年代 空间分配担保需要检查老年代的空间是否满足新生代所有对象空间，不够的话还要查看设置的值是否允许冒险，以决定 FullGC 是否有必要 类加载 加载获取字节流，生成对象，提供数据访问入口 验证是否符合虚拟机规范 准备为变量分配值 解析将符号引用替换为直接引用 初始化执行类构造器 () 方法]]></content>
@@ -230,9 +244,9 @@
         <category>win 配置</category>
       </categories>
       <tags>
-        <tag>配置笔记</tag>
-        <tag>软件</tag>
         <tag>MySQL</tag>
+        <tag>软件</tag>
+        <tag>配置笔记</tag>
         <tag>Windows</tag>
       </tags>
   </entry>
@@ -245,10 +259,10 @@
       </categories>
       <tags>
         <tag>Git</tag>
-        <tag>奇淫怪技</tag>
-        <tag>配置笔记</tag>
         <tag>软件</tag>
+        <tag>配置笔记</tag>
         <tag>博客</tag>
+        <tag>奇淫怪技</tag>
       </tags>
   </entry>
   <entry>
@@ -259,8 +273,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>博客</tag>
         <tag>图床</tag>
+        <tag>博客</tag>
         <tag>对象存储</tag>
         <tag>工具推荐</tag>
       </tags>
@@ -273,10 +287,10 @@
         <category>win 配置</category>
       </categories>
       <tags>
-        <tag>奇淫怪技</tag>
-        <tag>配置笔记</tag>
         <tag>软件</tag>
+        <tag>配置笔记</tag>
         <tag>Windows</tag>
+        <tag>奇淫怪技</tag>
       </tags>
   </entry>
   <entry>
