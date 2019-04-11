@@ -244,9 +244,9 @@
         <category>win 配置</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
-        <tag>软件</tag>
         <tag>配置笔记</tag>
+        <tag>软件</tag>
+        <tag>MySQL</tag>
         <tag>Windows</tag>
       </tags>
   </entry>
@@ -259,10 +259,10 @@
       </categories>
       <tags>
         <tag>Git</tag>
-        <tag>软件</tag>
-        <tag>配置笔记</tag>
-        <tag>博客</tag>
         <tag>奇淫怪技</tag>
+        <tag>配置笔记</tag>
+        <tag>软件</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -273,8 +273,8 @@
         <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>图床</tag>
         <tag>博客</tag>
+        <tag>图床</tag>
         <tag>对象存储</tag>
         <tag>工具推荐</tag>
       </tags>
@@ -287,10 +287,10 @@
         <category>win 配置</category>
       </categories>
       <tags>
-        <tag>软件</tag>
-        <tag>配置笔记</tag>
-        <tag>Windows</tag>
         <tag>奇淫怪技</tag>
+        <tag>配置笔记</tag>
+        <tag>软件</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
