@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[真的早就是优势]]></title>
+    <url>%2Fspring-will-end%2F</url>
+    <content type="text"><![CDATA[提要总说春江水暖，但只有体验过才知道今年的水让我瑟瑟发抖。我就是死也不会考研？ 感悟四月快走了，仍然没有春招 Offer。不过最近的感悟倒是获得挺多，当然还有血淋淋的教训。 早 早就是优势。 投简历越早投越好，就是知道内推信息就得立刻马上投。不要像我这样收藏着一大波招聘内推消息，过了几礼拜才投，hc 早没了……加上自身学校没有 Buffer 加成，我也不知道两个月前哪来的自信（不要跟我扯招聘时间，真的是越早投机会越大，因为我就是看了招聘时间，结果很难受，我挺后悔的）不举例子了，因为排队的人太多，我已经被简历劝退了两三次了，真的是血淋林的教训啊。 不过从另一方面来讲，春天为秋天积攒了经验，总比秋天结束的时候才知道好，毕竟大目标还是秋天，只是夏天缺乏了漂亮光鲜的履历罢了，但说实话挺难受的。 革命尚未成功有人说可以准备秋天了，但我并不认同。因为还有收官战，虽然金三银四转瞬即逝，但春天还没结束，拿起武器继续战斗吧！ 未完，待续……]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>春招</tag>
+        <tag>扯淡</tag>
+        <tag>经验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java 并发入门]]></title>
     <url>%2Fthread%2F</url>
     <content type="text"><![CDATA[碎碎念 拖更一时爽，一直拖更一直爽 最近忙于找实习以及挑战杯省赛，两者聚在一起当然就忙得不可开交。关于省赛，前几篇文章也有提到，其实我是不太愿意花时间搞的，但是命运使然，只好寻找某一平衡点喽。 概念 介绍一些概念，当然也为了使自己印象深刻 线程操作系统调度的最小单元，一个进程中的所有的线程都有完全一样的地址空间，意味着共享同样的全局变量。 上下文切换CPU 分配给各个线程时间片，但因为时间片很短，所以 CPU 不停的切换线程。但是 CPU 切换前会保存上一个任务的状态（进程状态、优先级、程序 I/O 的状态、文件描述符等）到内存，以便下次切换回这个状态。 解决方案 多次上下文切换会影响多线程执行速度 无锁并发编程 CAS 算法 使用最少线程 协程 线程间通信 等待/通知的经典范式 等待方 123456synchronized(对象)&#123; while(条件不满足)&#123; 对象.wait(); &#125; 对应的处理逻辑&#125; 通知方 1234synchronized(对象)&#123; 改变对象 对象.notifyAll();&#125; Thread.join() 线程 A 执行了 thread.join() 语句时表示，当前线程 A 等待 thread 线程终止之后才从 thread.join() 返回。 ThreadLocal 个人看源码理解就是在虚拟机栈中存着引用，真正存值的是 ThreadLocalMap。而 ThreadLocalMap 内部用 Entry 存放 K-V，哈希冲突则采用的是开放寻址法。另外，ThreadLocal 在线程池里容易存在内存泄漏，因为只要线程被 GC 回收，即使弱引用 Key 的值为 null，一般不会内存泄漏。就怕线程池回收利用，Key 为 null 了，value 则还有值。解决方法就是调用 remove() 方法，将值设置为 null。]]></content>
@@ -173,9 +187,9 @@
       </categories>
       <tags>
         <tag>配置笔记</tag>
-        <tag>GitHub</tag>
         <tag>Hexo</tag>
         <tag>Next</tag>
+        <tag>GitHub</tag>
         <tag>Blog</tag>
         <tag>Custom</tag>
       </tags>
