@@ -10,9 +10,9 @@ categories: 随笔
 ---
 
 <p align="center">
+    <img  src='https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190426211604.jpg' class="full-class">
 </p>
-    <img  src='https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190117142231.png' class="full-class">
-</p>
+
 ## 提要
 总说春江水暖，但只有体验过才知道今年的水让我瑟瑟发抖。我就是死也不会考研？
 
