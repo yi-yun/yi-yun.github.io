@@ -136,7 +136,7 @@ date: 2018-10-01 18:47:54
 &nbsp;
 <span>
     <div class="polaroid" >  
-        <a href="https://www.hojun.cn/" target="_blank"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="Norway" style="width:100%" /></a>
+        <a href="https://www.hojun.cn/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190511224357.png " alt="Norway" style="width:100%" /></a>
         <div class="containery"> 
             <a href="https://www.hojun.cn/" target="_blank" class="btn btn-outline btn-warning dim">hojun</a> 
             <br>
