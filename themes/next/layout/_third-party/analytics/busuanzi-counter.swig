@@ -1,6 +1,9 @@
 {% if theme.busuanzi_count.enable %}
 <div class="busuanzi-count">
+  <!--
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  -->
+  <script async src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/busuanzi.pure.mini.js"></script>
 
   {% if theme.busuanzi_count.total_visitors %}
     <span class="site-uv" title="{{ __('footer.total_visitors') }}">
