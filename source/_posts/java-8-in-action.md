@@ -88,10 +88,10 @@ System.out.println(Arrays.stream(numbers).sum());
 将流中的每个值都换成另一个流，然后把所有的流连接起来成为一个流，个人理解为将流里的值继续转换为子流然后连接。
     ```java
     List<Integer> list1 = Arrays.asList(1, 2, 3);
-            List<Integer> list2 = Arrays.asList(4,5);
-            list1.stream().flatMap(i->
-                list2.stream().map(j->new int[]{i,j})
-            ).forEach(t-> System.out.println(t[0]+","+t[1]));
+    List<Integer> list2 = Arrays.asList(4,5);
+    list1.stream().flatMap(i->
+       list2.stream().map(j->new int[]{i,j})
+        ).forEach(t-> System.out.println(t[0]+","+t[1]));
     ```
 - mapToInt
 
@@ -177,5 +177,42 @@ menu.stream().collect(reducing(" ",Dish::getName,(s1,s2)->s1+s2));
 
 PS：如果想提高效率，自行实现 Spliterator 接口  
 ~~为什么就一句话，因为我不太会~~
+
+
+## 默认方法
+> Ootional说下个人理解，接口中引入了 default 关键字，使接口更新更加平滑，不需要更改已经编译出来的客户端 clas 文件，只需在上游添加默认方法即可。
+~~其实官方就是为了方便引入 stream，防止升级之后出现客户端代码崩溃的问题~~ 
+
+## Optional
+> 这个竟然在面试中被问到了，1.8 之后处理异常有什么改进。虽然有了解过，但是竟然被问懵了，还有区别？？？后来经过提醒才意识到原来他问的是空指针处理的 Optional……
+
+### 他山之石
+在很早之前~~好像是《七周七语言》里（具体我忘了哪本书）~~看到的说语言的设计者很痛恨引入空指针这个概念，因为程序员在业务中需要去进行繁琐的判断，后来才设计出 Haskell 的 Maybe 类型。  
+像 Groovy 处理就直接引入安全导航操作符，若引用链中有空指针传递下去，返回一个 null。
+
+### 可以攻玉
+```Java
+public String getCarInsuranceName(Optional<Person> person) {
+        return person.flatMap(Person::getCar)
+            .flatMap(Car::getInsurance)
+            .map(Insurance::getName)
+            .orElse("Unknown");
+    }
+```
+
+### 细节
+在设计时没有考虑将其作为类的字段使用，没有实现 Serializable 接口，无法序列化  
+替代方案如下
+```Java
+public class Car {
+    private Insurance insurance;
+    public Optional<Insurance> getInsuranceAsOptional() {
+        return insurance;
+    }
+}
+```
+
+### 个人感受
+有点类似流，但不同于流的是它只是个对象，如 filter 是对对象属性的操作
 
 未完待续……
