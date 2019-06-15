@@ -215,4 +215,23 @@ public class Car {
 ### 个人感受
 有点类似流，但不同于流的是它只是个对象，如 filter 是对对象属性的操作
 
+
+## CompletableFuture
+工厂方法  
+CompletabelFuture.supplyAsync();
+- 异步操作，相比于并行的 stream 可以自定义线程池，适用于 I/O 密集型任务
+- 管理异常
+- 可以将异步任务合并  
+`thenCombine`
+- 注册回调函数  
+`thenAcecpt`
+- 决定程序运行  
+`allOf` `anyOf`
+
+## 时间
+- LocalDate
+- LocalTime
+- LocalDateTime
+
+
 未完待续……
