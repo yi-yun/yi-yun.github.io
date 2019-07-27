@@ -221,7 +221,6 @@ date: 2018-10-01 18:47:54
         </div>  
     </div>
 </span>
-&nbsp;
 <span>
     <div class="polaroid" >  
         <a href="https://baji.dev/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190407183725.png " alt="Norway" style="width:100%" /></a>
@@ -250,8 +249,20 @@ date: 2018-10-01 18:47:54
         </div>  
     </div>
 </span>
+&nbsp;
+<span>
+    <div class="polaroid" >  
+        <a href="https://maplesugar.gitlab.io/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/maple-leaf-avatar.jpg" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="https://maplesugar.gitlab.io/" target="_blank" class="btn btn-outline btn-warning dim">枫糖</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;Male Geek</span>
+            </p>
+        </div>  
+    </div>
+</span>
 </div>
-
 <hr>
 添(da)加(lao)友(shang)链(lian)须知：<br>
 1、烦请先在您自己的博客中添加&nbsp;<code>https://yi-yun.github.io/</code><br>
