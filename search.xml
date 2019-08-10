@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一次愉快但被完爆的面试]]></title>
+    <url>%2Finterview-ebay%2F</url>
+    <content type="text"><![CDATA[前言一个月前的实习生面试，面试过程很愉快，面试官很和蔼。但一个月后复盘，发现并没有回答到点子上，如果我是面试官，我也不会要这么一个人。 红黑树与 AVL 树的区别红黑树的定义 两个节点颜色只有红黑两种 根和叶子节点都为黑色 两个红节点不相连 路径上的黑节点数一致 AVL 强制左右子树高度相差为 1，平衡代价比红黑树大 LinkedList 与 ArrayList 的区别（也就是数组与链表的区别） 数组需要连续的地址空间 数组支持随机访问下标 还问了插入的话哪个快 Spring 代理如何实现 JDK 代理Spring 五种隔离级别 这一块答上来了，但是都是错的，春天的面试太失败了 数据库的四种级别 后端数据库默认的事务Mysql 默认采用的 REPEATABLE_READ 隔离级别 Oracle 默认采用的 READ_COMMITTED 隔离级别. 不可重复读这一块面试官应该想问，可重复读隔离级别如何消除不可重复读，但被我糊弄过去了。另外，RR 级别可以消除当前读的幻读。当然这些都是之后才学习到。 如何实现事务底层采用的还是 JDBC 的事务，只不过用动态代理以及注解的方式代理，抽出来往下看的话就是 TransactionManager 提供的 commit、rollback、close 的方法。 单点登录的流程AQS底层的结构是 FIFO 队列。线程进来先去竞争锁，竞争不到将线程扔到队尾自旋。一旦锁释放，若非公平锁，头结点后面的节点会通过自旋获得锁。 软链接与硬链接的区别 软链接快捷方式 硬链接复制一份相同的 inode 号以及权限，并且计数器 +1，另外硬链接的文件必须存在无法对目录硬链接。硬链接不能在不同文件系统中使用。 Maven 依赖命令行查看我应该答，可以通过 mvn -h 的方式看看]]></content>
+      <categories>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>未来</tag>
+        <tag>记录</tag>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Mybatis 拦截器的简单实现]]></title>
     <url>%2FMybatis-Interceptor%2F</url>
     <content type="text"><![CDATA[前言需求驱动学习，最近一周组长让我在业务模块里加日志，经过与导师以及组长讨论决定用拦截器记录日志。周五下班前已经发了提测邮件。 虽然我知道 MyBatis 有这东西，但是没在实际情况中用过，心里有点虚2333……所以才有了此文的理解。 前世今生它的本质就是 JDK 的动态代理。首先先来复习一下动态代理我贴了一段最常见的 JDK 动态代理的代码123456789101112131415161718192021222324252627282930313233343536373839404142434445//服务员的接口public interface Waiter &#123; void serve();&#125;//服务员的实现public class WaiterImpl implements Waiter &#123; @Override public void serve() &#123; System.out.println("服务中..."); &#125;&#125;//需要代理的对象处理器class WaitInvocationHandler implements InvocationHandler &#123; private Waiter waiter; public WaitInvocationHandler(Waiter waiter1) &#123; waiter = waiter1; &#125; @Override public Object invoke(Object proxy, Method method, Object[] args) throws Throwable &#123; System.out.println("你好"); Object invoke = method.invoke(waiter, args); System.out.println("再见"); return invoke; &#125;&#125;public class App &#123; //普通的实现 @Test public void fun() &#123; Waiter waiter = new WaiterImpl(); waiter.serve(); &#125; @Test public void fun1() &#123; Waiter a = new WaiterImpl(); ClassLoader classLoader = getClass().getClassLoader(); Class[] classes = &#123;Waiter.class&#125;; //生成代理对象 Waiter waiterproxy = (Waiter) Proxy.newProxyInstance(classLoader, classes, new WaitInvocationHandler(a)); waiterproxy.serve(); &#125;&#125; 拦截器V1我现在要在函数执行前后记录日志操作，考虑需要在代理方法那里定义个拦截器的接口，如下代码所示12345678910111213141516171819202122//拦截器 V1 版本public interface MyInterceptorV1 &#123; void interceptor();&#125;//代理对象变成这个public class TargetProxyV1 implements InvocationHandler &#123; private Target target; private MyInterceptorV1 myInterceptor; public TargetProxyV1(Target target, MyInterceptorV1 myInterceptor) &#123; this.target = target; this.myInterceptor = myInterceptor; &#125; @Override public Object invoke(Object proxy, Method method, Object[] args) throws Throwable &#123; myInterceptor.interceptor(); return method.invoke(target, args); &#125;&#125; 这是最简单的版本，但是我们很多时候需要拦截参数等根据参数判断拦不拦截等，代码更新如下123456789public interface MyInterceptorV1 &#123; void interceptor(Method method, Object[] args);&#125;@Overridepublic Object invoke(Object proxy, Method method, Object[] args) throws Throwable &#123; myInterceptor.interceptor(method, args); return method.invoke(target, args);&#125; V2似乎上面的方案很完美 废话肯定不完美，不然怎么会有这段 没错，第二段代码并不是很优雅，有方法参数重复，可以考虑将三者抽出来，直接在拦截器的实现里写上method.invoke(target, args);，如下代码所示12345678910111213141516@Getter@Setter@AllArgsConstructorpublic class MyInvocation &#123; private Object target; private Method method; private Object[] args; public Object proceed() throws InvocationTargetException, IllegalAccessException &#123; return method.invoke(target, args); &#125;&#125;//没错这就是 V2 版本public interface MyInterceptorV2 &#123; Object interceptor(MyInvocation invocation) throws Throwable;&#125; 总结Mybatis 的拦截器就是像我上面这么写的，名字也跟我取得一样，只是它更加复杂，能够通过注解区分拦截 update 操作和 query 等操作。 既完成了任务又巩固了原来的知识，这种感觉很棒，最关键的是还有钱拿…… 本文代码]]></content>
@@ -195,8 +208,8 @@
         <category>代码协作</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>Git</tag>
+        <tag>笔记</tag>
         <tag>GitHub</tag>
         <tag>工具</tag>
         <tag>Arch</tag>
@@ -282,9 +295,9 @@
         <category>代码协作</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>个人</tag>
         <tag>Git</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -408,8 +421,8 @@
         <category>win 配置</category>
       </categories>
       <tags>
-        <tag>Android Studio 安装配置</tag>
         <tag>笔记</tag>
+        <tag>Android Studio 安装配置</tag>
       </tags>
   </entry>
   <entry>
