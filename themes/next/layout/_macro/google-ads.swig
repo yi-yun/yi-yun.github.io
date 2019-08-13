@@ -1,10 +1,10 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
+     style="display:block"
      data-ad-client="ca-pub-6776924997824252"
-     data-ad-slot="2216491302"></ins>
+     data-ad-slot="6717901145"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
