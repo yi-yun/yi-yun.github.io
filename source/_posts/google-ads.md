@@ -19,6 +19,7 @@ categories: 博客搭建
 算是教程吧
 
 <!--more-->
+
 ## 准备
 - 一个稳定的 VPN  
 不稳定也行，注册卡顿你不介意就行……
@@ -28,7 +29,7 @@ categories: 博客搭建
 
 ## 申请开通
 1. [传送门](https://www.google.cn/adsense/start/#/?modal_active=none)
-2. 将谷歌提供的代码扔在 head l里，因为我的博客是 `hexo v6.0`，所以讲验证代码扔在了 `themes/next/layout/_custom/head.swig` 这里
+2. 将谷歌提供的代码扔在 head 里，因为我的博客是 `hexo v6.0`，所以将验证代码扔在了 `themes/next/layout/_custom/head.swig` 里面，这样之后主题升级会更加平滑
 3. 验证完后，等两三天，审核通过就可以了
 
 友情提醒：新站不容易过审
@@ -50,10 +51,10 @@ categories: 博客搭建
 #### 文章内嵌广告  
 可以放在文章尾部，代码往 `themes/next/layout/_macro/post.swig` 一扔就行
  
-PS：不过得注意位置我扔在这里，大佬们可根据自己博客 F12 嵌代码。    
+PS：不过得注意位置我扔在这里，大佬们可根据自己博客在浏览器 F12 选位置嵌代码。    
 ![](https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190813205025.png)
  
-后来发现内嵌广告太大影响体验，就改成了展示广告的横幅版了……
+后来发现内嵌广告太大，就改成了展示广告的横幅版了……
  
  
 ## 最后
