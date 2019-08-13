@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[人人都能拥有的广告位]]></title>
+    <url>%2Fgoogle-ads%2F</url>
+    <content type="text"><![CDATA[前言此篇是本博客引入 Google 广告的过程算是教程吧 准备 一个稳定的 VPN不稳定也行，注册卡顿你不介意就行…… 一个博客要原创几篇文章，我猜是人工审核吧 一个 Google 账号 申请开通 传送门 将谷歌提供的代码扔在 head l里，因为我的博客是 hexo v6.0，所以讲验证代码扔在了 themes/next/layout/_custom/head.swig 这里 验证完后，等两三天，审核通过就可以了 友情提醒：新站不容易过审 配置自动广告没玩过，据说是 Google 爸爸根据网站长宽比投放的，投放率很低。 广告单元这是今天要讲的关键部分 展示广告将代码插入到 themes/next/layout/_macro/sidebar.swig 文件中 &lt;div class=”sidebar-inner”&gt; &lt;/div&gt; 标签包裹着的最下部。 信息流广告类似知乎推荐、QQ 空间信息流式中的广告，扔太多地方不好就没研究了。 文章内嵌广告可以放在文章尾部，代码往 themes/next/layout/_macro/post.swig 一扔就行 PS：不过得注意位置我扔在这里，大佬们可根据自己博客 F12 嵌代码。 后来发现内嵌广告太大影响体验，就改成了展示广告的横幅版了…… 最后一般 Chrome 或者 FireFox 都会装广告屏蔽插件，手机浏览器应该不会被屏蔽，所以一般也不会有人点。（那为啥要装？人总要有梦想，万一有人问了呢） 游客点一下根据广告质量来算钱，有点一下 0.14 刀的也有 0.07 刀的，广告点满一百刀才能体现。不过别想着薅羊毛，鬼知道 Google 怎么检测的，容易被封号，还是希望大佬们不要舍本逐末吧。 最后，大佬们，关掉广告插件帮我点个广告可好～]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>广告</tag>
+        <tag>Google</tag>
+        <tag>钱</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一次愉快但被完爆的面试]]></title>
     <url>%2Finterview-ebay%2F</url>
     <content type="text"><![CDATA[前言一个月前的实习生面试，面试过程很愉快，面试官很和蔼。但一个月后复盘，发现并没有回答到点子上，如果我是面试官，我也不会要这么一个人。 红黑树与 AVL 树的区别红黑树的定义 两个节点颜色只有红黑两种 根和叶子节点都为黑色 两个红节点不相连 路径上的黑节点数一致 AVL 强制左右子树高度相差为 1，平衡代价比红黑树大 LinkedList 与 ArrayList 的区别（也就是数组与链表的区别） 数组需要连续的地址空间 数组支持随机访问下标 还问了插入的话哪个快 Spring 代理如何实现 JDK 代理Spring 五种隔离级别 这一块答上来了，但是都是错的，春天的面试太失败了 数据库的四种级别 后端数据库默认的事务Mysql 默认采用的 REPEATABLE_READ 隔离级别 Oracle 默认采用的 READ_COMMITTED 隔离级别. 不可重复读这一块面试官应该想问，可重复读隔离级别如何消除不可重复读，但被我糊弄过去了。另外，RR 级别可以消除当前读的幻读。当然这些都是之后才学习到。 如何实现事务底层采用的还是 JDBC 的事务，只不过用动态代理以及注解的方式代理，抽出来往下看的话就是 TransactionManager 提供的 commit、rollback、close 的方法。 单点登录的流程AQS底层的结构是 FIFO 队列。线程进来先去竞争锁，竞争不到将线程扔到队尾自旋。一旦锁释放，若非公平锁，头结点后面的节点会通过自旋获得锁。 软链接与硬链接的区别 软链接快捷方式 硬链接复制一份相同的 inode 号以及权限，并且计数器 +1，另外硬链接的文件必须存在无法对目录硬链接。硬链接不能在不同文件系统中使用。 Maven 依赖命令行查看我应该答，可以通过 mvn -h 的方式看看]]></content>
