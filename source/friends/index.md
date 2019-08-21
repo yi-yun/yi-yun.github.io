@@ -262,6 +262,21 @@ date: 2018-10-01 18:47:54
         </div>  
     </div>
 </span>
+<!-- &nbsp; -->
+<span>
+    <div class="polaroid" >  
+        <a href="https://blog.blinkstar.cn/" target="_blank"><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190821222658.png" alt="Norway" style="width:100%" /></a>
+        <div class="containery"> 
+            <a href="https://blog.blinkstar.cn/" target="_blank" class="btn btn-outline btn-warning dim">Serence</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;文艺青年</span>
+                &nbsp;
+                <span><i class="fa fa-tags"></i>&nbsp;程序员</span>
+            </p>
+        </div>  
+    </div>
+</span>
 </div>
 <hr>
 添(da)加(lao)友(shang)链(lian)须知：<br>
