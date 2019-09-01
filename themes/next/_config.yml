@@ -975,7 +975,7 @@ js: js
 images: images
 
 
-fireworks: true
+fireworks: false
 
 passage_end_tag:
   enabled: true
