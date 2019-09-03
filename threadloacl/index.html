@@ -151,7 +151,7 @@
 <meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190901142031.jpeg
 ">
 <meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190901132722.png">
-<meta property="og:updated_time" content="2019-09-01T06:28:37.669Z">
+<meta property="og:updated_time" content="2019-09-03T14:02:23.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次线上 Bug 献给了 ThreadLocal">
 <meta name="twitter:description" content="前言捂脸.jpg">
@@ -504,7 +504,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">1.3k</span>
               
 
               
@@ -543,8 +543,8 @@
 
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>捂脸.jpg</p>
 <a id="more"></a>
-<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>这篇博文说到的用了 Mybatis 做拦截器来记录产品以及运营变更后台操作的信息。本来直接在后台管理的模块操作就可以了，但是有个要求是记录操作前后的信息……因为公司大都是微服务采用的但数据源，变更前后的信息是在 B 服务。</p>
-<p>一开始接到任务的时候就感觉不好搞，这不是坑爹嘛（小声）</p>
+<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p><a href="https://yi-yun.github.io/Mybatis-Interceptor/">这篇博文</a>说到的用了 Mybatis 做拦截器来记录产品以及运营变更后台内容的操作信息。本来直接在后台管理的模块操作就可以了，但是有个要求是记录操作前后的信息……因为公司大都是微服务采用的单数据源，操作人信息是在 A 服务，变更前后的信息是在 B 服务。</p>
+<p>一开始接到任务的时候就感觉不好搞，这不是坑爹嘛直接拦截 Controller 的日志多好（小声）</p>
 <p>经过与大佬的深入探讨，有两个技术方案。这里为了长话短说，就只讲最终实现的技术方案。</p>
 <p><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190901132722.png" alt></p>
 <p>我需要在 RPC API 中加个字段来传递操作人的真实信息以及客户端 IP，B 服务接收到后通过 ThreadLocal 传递到 DAO 层，最后拦截器先去数据库查询出旧值，然后执行原来的方法，最后拼接旧值以及新值，日志入库。</p>
