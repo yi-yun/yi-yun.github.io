@@ -140,16 +140,23 @@
 
 
 
-  <meta name="description" content="诚毅勤朴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="斯是陋室，惟吾德馨">
-<meta property="og:url" content="https://yi-yun.github.io/tags/图床/index.html">
+  <meta name="description" content="前言这是个困扰我一年多的问题，今天终于解决了……">
+<meta name="keywords" content="Linux,排错,踩坑,IDEA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 下 IDEA 的 Ctrl+Alt+S">
+<meta property="og:url" content="https://yi-yun.github.io/idea-ctrl-alt-s/index.html">
 <meta property="og:site_name" content="斯是陋室，惟吾德馨">
-<meta property="og:description" content="诚毅勤朴">
+<meta property="og:description" content="前言这是个困扰我一年多的问题，今天终于解决了……">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917175139.jpg">
+<meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917172104.jpg">
+<meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917173543.png">
+<meta property="og:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917174122.png">
+<meta property="og:updated_time" content="2019-09-17T09:58:02.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="斯是陋室，惟吾德馨">
-<meta name="twitter:description" content="诚毅勤朴">
+<meta name="twitter:title" content="Linux 下 IDEA 的 Ctrl+Alt+S">
+<meta name="twitter:description" content="前言这是个困扰我一年多的问题，今天终于解决了……">
+<meta name="twitter:image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917175139.jpg">
 
 
 
@@ -158,7 +165,7 @@
 
 
 
-  <link rel="canonical" href="https://yi-yun.github.io/tags/图床/">
+  <link rel="canonical" href="https://yi-yun.github.io/idea-ctrl-alt-s/">
 
 
 
@@ -168,7 +175,7 @@
   };
 </script>
 
-  <title>标签: 图床 | 斯是陋室，惟吾德馨</title>
+  <title>Linux 下 IDEA 的 Ctrl+Alt+S | 斯是陋室，惟吾德馨</title>
   
 
 
@@ -224,7 +231,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/yi-yun" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -282,7 +289,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
@@ -368,111 +375,326 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>图床<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yi-yun.github.io/idea-ctrl-alt-s/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yi-Yun">
+      <meta itemprop="description" content="诚毅勤朴">
+      <meta itemprop="image" content="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/IMG_5839.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="斯是陋室，惟吾德馨">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/early-is-advantage/" itemprop="url">
-              
-                <span itemprop="name">早就是优势</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Linux 下 IDEA 的 Ctrl+Alt+S
+              
+            
+          </h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-02-03T21:39:58+08:00" content="2019-02-03">
-          02-03
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-17 17:46:59" itemprop="dateCreated datePublished" datetime="2019-09-17T17:46:59+08:00">2019-09-17</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/日常记录/" itemprop="url" rel="index"><span itemprop="name">日常记录</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/idea-ctrl-alt-s/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/idea-ctrl-alt-s/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/idea-ctrl-alt-s/" class="leancloud_visitors" data-flag-title="Linux 下 IDEA 的 Ctrl+Alt+S">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">741</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <p align="center"><br>    <img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917175139.jpg" class="full-class"><br></p>
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/图床的选择/" itemprop="url">
-              
-                <span itemprop="name">可能是最佳的免费图床</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-11T13:15:48+08:00" content="2018-10-11">
-          10-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是个困扰我一年多的问题，今天终于解决了……<br><a id="more"></a></p>
+<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>一年前将主系统换成 Arch Linux 后，其他一切正常就是 IDEA 的打开设置的快捷键 ctrl+alt+s 失效，让我很是头疼。虽然不是很重要，但是对于我这种强迫症来说别提多难受了……</p>
+<p>我曾多次在设置里的快捷键查找 Ctrl+Alt+S，每次无功而返。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>今天在群里闲聊到 Linux 下 IDEA 的快捷键问题，一位大佬就发了一张解决方案的截图给了我新的思路。</p>
+<p><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917172104.jpg" alt></p>
+<p>Linux 万物皆是文件</p>
+<p>倾向于系统文件快捷键的占用，所以我下载了 dconf-editor 去更改快捷键的文件。不幸的是看上去并没有什么问题，文件显示层叠窗口的快捷键并没有被设置。打开搜狗输入法以及 Konsole 也都没有发现 Ctrl+Alt+S 的痕迹，那为什么会被占用呢？百思不得其解……</p>
+<p>想起了之前加入 TG 上的 Arch Linux 官方群组，就去上面将问题描述了一遍。一分钟后，大佬告诉我是因为 fcitx 的全局快捷键，Ctrl+Alt+S 被设置成保存所有设置和历史。</p>
+<p><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917173543.png" alt></p>
+<p>收到回复后，我一想那简单啊，修改配置文件不就完了……<br>天真的把 S 改成 Q，重新登录发现并没有什么卵用。定睛一看前面还有 # 号（吐血.jpg）……改成下面这样重启登录就解决了。</p>
+<p><img src="https://yiyun-1253940215.cos.ap-shanghai.myqcloud.com/20190917174122.png" alt></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>gnome 可以下载 dconf-editor 去查找快捷键有没有被默认系统设置占用，kde 只需在设置里查找是否有重复的快捷键即可</li>
+<li>看看是不是因为输入法的框架是 fctix，是的话修改 fctix 的配置文件，将保存所有设置的快捷键改成其他键位</li>
+<li>直接改 IDEA 的快键键不好么？？？</li>
+</ol>
+<p>这个快捷键终于解决了，让我心情很舒畅！！！希望今后能帮助到其他人。</p>
 
       
     </div>
 
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------- The End -------------</div>
+    
+</div>
+      
+    </div>
+    
+    
+    
+    
+   
+    
+
+    
+      <div>
+        <div style="margin: 20px auto; width: 90%; text-align: center;">
+  <div>「不求打赏---只求大佬点广告」</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span><i class="fa fa-qrcode fa-2x" style="line-height:35px;"></i></span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Yi-Yun 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"><i class="fa fa-compass"></i> Linux</a>
+          
+            <a href="/tags/排错/" rel="tag"><i class="fa fa-compass"></i> 排错</a>
+          
+            <a href="/tags/踩坑/" rel="tag"><i class="fa fa-compass"></i> 踩坑</a>
+          
+            <a href="/tags/IDEA/" rel="tag"><i class="fa fa-compass"></i> IDEA</a>
+          
+        </div>
+      
+
+
+      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6776924997824252" data-ad-slot="6717901145" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div style="color: rgba(0, 0, 0, 0.75); font-size:13px; letter-spacing:3px">(&gt;看完记得五星好评哦&lt;)</div>
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/threadloacl/" rel="next" title="第一次线上 Bug 献给了 ThreadLocal">
+                <i class="fa fa-chevron-left"></i> 第一次线上 Bug 献给了 ThreadLocal
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -493,8 +715,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -790,6 +1021,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">2.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决"><span class="nav-number">3.</span> <span class="nav-text">解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1046,6 +1293,10 @@ function createtime() {
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
@@ -1469,6 +1720,23 @@ function createtime() {
   </script>
 
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 13924,
+    el: 'wpac-rating',
+    color: 'f79533'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
 
