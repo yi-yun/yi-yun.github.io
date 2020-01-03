@@ -292,6 +292,21 @@ date: 2018-10-01 18:47:54
         </div>  
     </div>
 </span>
+&nbsp;
+<span>
+    <div class="polaroid" >  
+        <a href="https://www.aengus.top/" target="_blank"><img src="https://www.aengus.top/assets/common/profile.png" alt="Norway" style="width:94%" /></a>
+        <div class="containery"> 
+            <a href="https://www.aengus.top/" target="_blank" class="btn btn-outline btn-warning dim">Aengus | Blog</a> 
+            <br>
+            <p>
+                <span><i class="fa fa-tags"></i>&nbsp;Hungry</span>
+                &nbsp;
+                <span><i class="fa fa-tags"></i>&nbsp;Foolish</span>
+            </p>
+        </div>  
+    </div>
+</span>
 </div>
 <hr>
 添(da)加(lao)友(shang)链(lian)须知：<br>
