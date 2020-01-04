@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yi-yun.github.io/Android-Studio-%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2020-01-04</lastmod>
-  </url>  <url>
-    <loc>https://yi-yun.github.io/CRLF-vs-LF/</loc>
-    <lastmod>2020-01-04</lastmod>
-  </url>  <url>
-    <loc>https://yi-yun.github.io/DigitalOcean/</loc>
-    <lastmod>2020-01-04</lastmod>
-  </url>  <url>
-    <loc>https://yi-yun.github.io/Git%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2020-01-04</lastmod>
-  </url>  <url>
-    <loc>https://yi-yun.github.io/Hexo-Next-Custom/</loc>
-    <lastmod>2020-01-04</lastmod>
-  </url>  <url>
     <loc>https://yi-yun.github.io/Intern/</loc>
     <lastmod>2020-01-04</lastmod>
   </url>  <url>
@@ -44,6 +29,9 @@
     <lastmod>2020-01-04</lastmod>
   </url>  <url>
     <loc>https://yi-yun.github.io/final2018/</loc>
+    <lastmod>2020-01-04</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/final2019/</loc>
     <lastmod>2020-01-04</lastmod>
   </url>  <url>
     <loc>https://yi-yun.github.io/for-interview/</loc>
@@ -107,6 +95,21 @@
     <lastmod>2020-01-04</lastmod>
   </url>  <url>
     <loc>https://yi-yun.github.io/%E7%88%AC%E5%9D%91%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2020-01-04</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/Android-Studio-%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2020-01-04</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/CRLF-vs-LF/</loc>
+    <lastmod>2020-01-04</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/DigitalOcean/</loc>
+    <lastmod>2020-01-04</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/Git%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2020-01-04</lastmod>
+  </url>  <url>
+    <loc>https://yi-yun.github.io/Hexo-Next-Custom/</loc>
     <lastmod>2020-01-04</lastmod>
   </url>
 </urlset>
